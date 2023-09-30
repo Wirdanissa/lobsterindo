@@ -4,7 +4,7 @@
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-
+<div class="m-5">
     <a class="m-2 btn btn-primary" href="/barang/create">Tambah</a>
     <table class="table">
         <thead>
@@ -45,4 +45,5 @@
             @endforeach
         </tbody>
     </table>
+</div>
 @endsection

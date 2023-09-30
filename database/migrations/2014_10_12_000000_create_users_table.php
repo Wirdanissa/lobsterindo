@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->integer('role')->default(1);
             // Role
-            // 1. Pembeli 
+            // 1. Pembeli
             // 2. Boss / Owner
             // 3. Sales / Manager Cabang
             // 4. Admin Gudang
