@@ -10,7 +10,7 @@
         <thead>
             <tr>
                 <th>id</th>
-                <th>id_penangkaran</th>
+                <th>alamat_penangkaran</th>
                 <th>nama_barang</th>
                 <th>jumlah_barang</th>
                 <th>berat</th>
@@ -23,11 +23,7 @@
             @foreach ($data as $item )
                 <tr>
                     <td>{{ $item->id }}</td>
-                    <td>{{ $item->id_penangkaran }}</td>
-
-                    {{-- Syntax untuk memanggil table yang terhubung dengan item --}}
-                    {{-- <td>{{ $item->penangkaran->lokasi_penangkaran }}</td> --}}
-
+                    <td>{{ $item->wali['lokasi_penangkaran'] }}</td>
                     <td>{{ $item->nama_barang }}</td>
                     <td>{{ $item->jumlah_barang }}</td>
                     <td>{{ $item->berat }}</td>
