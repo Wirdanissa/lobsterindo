@@ -4,52 +4,52 @@
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <!-- banner --> 
-    <div id="carouselExampleCaptions" class="carousel slide slide mt-5">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active " data-bs-interval="10000">
-    <div class="d-flex justify-content-center">
-    <img src="{{ asset('images/lobster thumbnail 3.png') }}" class=" " alt="...">
-    </div>  
-    <div class="carousel-caption d-none d-md-block">
-        <h5>Lobster Air Tawar</h5>
-        <p>Kami Selalu Mengutamakan Kualitas dan Keramahan Karyawan Kami</p>
-      </div>
+    <!-- banner -->
+<div id="carouselExampleCaptions" class="carousel slide slide mt-5">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <div class="d-flex justify-content-center">
-    <img src="{{ asset('images/lobster thumbnail 2.png') }}" class="d-block w-90" alt="...">
+    <div class="carousel-inner">
+        <div class="carousel-item active " data-bs-interval="10000">
+        <div class="d-flex justify-content-center">
+        <img src="{{ asset('images/lobster thumbnail 3.png') }}" class=" " alt="...">
+        </div>
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Lobster Air Tawar</h5>
+            <p>Kami Selalu Mengutamakan Kualitas dan Keramahan Karyawan Kami</p>
+        </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+        <div class="d-flex justify-content-center">
+        <img src="{{ asset('images/lobster thumbnail 2.png') }}" class="d-block w-90" alt="...">
+        </div>
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Bekerjasama Membangun Negeri</h5>
+            <p>Kami telah mengajarkan Budidaya lobster airtawar Kepada ratusan petani yang ada di indonesia</p>
+        </div>
+        </div>
+        <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+        <img src="{{ asset('images/lobster thumbnail 1.png') }}" class="d-block w-90" alt="...">
+        </div>
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Kualitas Pakan</h5>
+            <p>Kami selalu memakai Pakan dengan Kualitas tinggi</p>
+        </div>
+        </div>
     </div>
-    <div class="carousel-caption d-none d-md-block">
-        <h5>Bekerjasama Membangun Negeri</h5>
-        <p>Kami telah mengajarkan Budidaya lobster airtawar Kepada ratusan petani yang ada di indonesia</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-    <div class="d-flex justify-content-center">
-    <img src="{{ asset('images/lobster thumbnail 1.png') }}" class="d-block w-90" alt="...">
-    </div>  
-    <div class="carousel-caption d-none d-md-block">
-        <h5>Kualitas Pakan</h5>
-        <p>Kami selalu memakai Pakan dengan Kualitas tinggi</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style="color: black">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style="color: black">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
- 
+
     <!-- tentang -->
     <br>
     <br>
@@ -89,18 +89,18 @@
           This is a our partnership
         </p>
         <div class="row pt-4 gx-4 gy-4">
-          <div class="col-md-4 text-center tim">
+          <div class="col-md-4 text-center partnership">
           <img src="{{ asset('images/DragonHotPot.png') }}" class="rounded-circle mb-3" />
             <h4 id="item">Dragon Hotpot1</h4>
             <p>Restoran chinese food, menyediakan berbagai masakan dengan citarasa khas masakan chinese</p>
           </div>
-          <div class="col-md-4 text-center tim">
+          <div class="col-md-4 text-center partnership">
           <img src="{{ asset('images/SangSeafood.png') }}" class="rounded-circle mb-3" />
 
             <h4 id="item">SangSeafood</h4>
             <p>Restoran Seafood, menyediakan berbagai macam seafood menarik dan di display secara langsung di area resto </p>
           </div>
-          <div class="col-md-4 text-center tim">
+          <div class="col-md-4 text-center partnership">
           <img src="{{ asset('images/rajalobster.png') }}" class="rounded-circle mb-3" />
             <h4 id="item">Raja Lobster</h4>
             <p>Raja Lobster adalah salah satu Mitra kami yang sukses dalam mengembangkan bisnis budidaya lobster airtawar</p>
@@ -109,6 +109,4 @@
       </div>
     </div>
     <!-- kontak -->
-  
-    <script src="{{ asset('js/app.js') }}"></script>
 @endsection

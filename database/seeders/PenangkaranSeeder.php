@@ -16,7 +16,7 @@ class PenangkaranSeeder extends Seeder
     public function run(): void
     {
         DB::table('penangkaran')->insert([
-            'id_user'=>'1',
+            'manager_id'=>'1',
             'lokasi_penangkaran'=>'jl.tambak medokan ayu VIC/68',
             'jumlah_karyawan'=>'2',
             'created_at'=>date('Y-m-d H:i:s')

@@ -18,9 +18,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'nama_user',
         'email',
         'password',
+        'role',
+        'alamat',
+        'no_telp'
     ];
 
     /**
@@ -42,4 +45,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function karyawan(){
+
+        return $this->belongsToMany(Penangkaran::class,'karyawan')->withTimestamps();
+
+    }
 }
