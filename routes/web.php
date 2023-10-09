@@ -52,6 +52,18 @@ Route::get('/register', function(){
 Route::get('/partnership', function(){
     return view('menu.partnership');
 });
+Route::get('/budidaya', function(){
+    return view('menu.budidaya');
+});
+Route::get('/belanja', function(){
+    return view('menu.belanja');
+});
+Route::get('/changepw', function(){
+    return view('menu.change_password');
+});
+Route::get('/stock', function(){
+    return view('admin.admin_gudang.admin_stock');
+});
 
 // function untuk membuat data karyawan / user yang terhubung dengan penangkaran
 // Route::get('tes', function(){
