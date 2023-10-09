@@ -1,41 +1,102 @@
 .footer {
-    background-color: #f5f5f5;
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
     padding: 20px 0;
-    color: #777;
+    color: #ffffff;
+    font-family: 'Poppins';
     font-size: 14px;
-    text-align: center;
+    /* text-align: center; */
     border-top: 1px solid black;
     margin-top: 5vh; /* Menggunakan unit viewport height untuk margin-top */
+    padding: 10vh;
+    padding-left: 20vh;
   }
-  
-  .footer-content {
+  .div_logo{
+    /* background-color: red; */
+    /* background-color: rgb(255, 0, 255); */
+
+
+  }
+  .logo {
+    position: absolute;
+    bottom: 30px;
+    width: 282px;
+    /* height: 100%; */
+    clip: rect(80px,250px,200px,40px);
+    /* background-color: red; */
+    /* top: ; */
+    /* width: 100%; */
+    /* clip-path: inset(5px, 10px, 10px, 10px); */
+  }
+
+  .logo_bahasa{
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    bottom: 0;
   }
-  
+  .bahasa{
+    position: relative;
+    top: 140px;
+    height: 100px;
+  }
+  .footer-content {
+    /* background-color: red; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* align-items: normal; */
+    justify-content: left;
+  }
+
+  .sosmed a .img{
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    /* display: inline; */
+    background-color: red;
+    -webkit-mask: src="images/instagram.png" ;
+  }
+
+  .sosmed a img{
+    margin: 5px;
+  }
+
   .footer p {
     margin: 0;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: left;
+    font-size: 24px;
+    font-weight: bold;
   }
-  
+
   .footer-links {
+
     list-style: none;
     padding: 0;
     margin-top: 10px;
+
   }
-  
+
   .footer-links li {
-    display: inline-block;
-    margin: 0 5px;
+    /* display: inline-block; */
+    /* font-size: 14px; */
+    display: flex;
+    justify-content: left;
+    /* margin: 0 5px; */
+    /* background-color: purple; */
+
   }
-  
+
   .footer-links li a {
-    color: #777;
+
+    font-weight: 250;
+    color: #ffffff;
     text-decoration: none;
-  }
-  
+    margin: 0;
+
+}
+
   .footer-links li a:hover {
-    color: #333;
+    color: #1b1b1b;
+    font-weight: 300;
   }
-  

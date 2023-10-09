@@ -1,0 +1,14 @@
+.circle1{
+    position: absolute;
+    top: 50px;
+    width: 116px;
+    height: 116px;
+    flex-shrink: 0;
+    background-color: #FF416C;
+    z-index: 1000;
+}
+.tes{
+    position: relative;
+    width: 100px;
+    height: 100px;;
+}
