@@ -1,29 +1,43 @@
-nav{
-    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    nav{
+    background: linear-gradient(90deg, #FF4A2B 37.97%, #FF416C 55.9%);
     height: 10vh;
     width: 100%;
-    top: 0;
+    flex-shrink: 0;
     position: fixed !important;
     box-shadow: 0px 8px 20px #888888;
-    z-index: 1;
+    z-index: 6;
     }
 
-li a{
-    color: white;
+    li a{
+    color: #FFF;
+    text-align: center;
+    /* Menu_Navbar */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* color: white;
     font-size: 14px;
     text-decoration: none;
-    margin: 15px 0;
-}
+    margin: 15px 0; */
+    }
+    .profile{
 
-.nav-link{
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    }
+
+    .nav-link{
     font-weight: normal;
-  }
+     }
 
   .nav-link:hover{
     color: white;
     font-weight: bold;
-  }
+     }
 
   .nav-link.active {
     color: white;
-  }
+     }

@@ -43,6 +43,15 @@ Route::resource('penangkaran', PenangkaranController::class);
 
 Route::resource('pembayaran', PembayaranController::class);
 
+Route::get('/login', function(){
+    return view('menu.login');
+});
+Route::get('/register', function(){
+    return view('menu.register');
+});
+Route::get('/partnership', function(){
+    return view('menu.partnership');
+});
 
 // function untuk membuat data karyawan / user yang terhubung dengan penangkaran
 // Route::get('tes', function(){
