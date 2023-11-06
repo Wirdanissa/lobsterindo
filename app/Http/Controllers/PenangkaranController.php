@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Penangkaran;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -22,7 +23,8 @@ class PenangkaranController extends Controller
      */
     public function create()
     {
-        return view('penangkaran.penangkaran_create');
+        $data = User::where('role',3)->get();
+        return view('penangkaran.penangkaran_create')->with('data',$data);
     }
 
     /**
@@ -32,18 +34,18 @@ class PenangkaranController extends Controller
     {
         Session::flash('manager_id', $request->manager_id);
         Session::flash('lokasi_penangkaran', $request->lokasi_penangkaran);
-        Session::flash('jumlah_karyawan', $request->jumlah_karyawan);
+        // Session::flash('jumlah_karyawan', $request->jumlah_karyawan);
 
         $request->validate([
             'manager_id'=>'required|numeric',
             'lokasi_penangkaran'=>'required',
-            'jumlah_karyawan'=>'required|numeric'
+            // 'jumlah_karyawan'=>'required|numeric'
         ], [
             'manager_id.required' => 'Manager ID wajib diisi',
             'manager_id.numeric' => 'Manager ID hanya menerima input angka',
             'lokasi_penangkaran.required' => 'Lokasi penangkaran Wajib diisi',
-            'jumlah_karyawan.required' => 'Jumlah Karyawan Wajib diisi',
-            'jumlah_karyawan.numeric' => 'Jumlah Karyawan hanya menerima input angka',
+            // 'jumlah_karyawan.required' => 'Jumlah Karyawan Wajib diisi',
+            // 'jumlah_karyawan.numeric' => 'Jumlah Karyawan hanya menerima input angka',
         ]);
         $data = [
             'manager_id' => $request->manager_id,
@@ -68,8 +70,13 @@ class PenangkaranController extends Controller
      */
     public function edit(string $id)
     {
-        $data = Penangkaran::where('id', $id)->first();
-        return view('penangkaran.penangkaran_edit')->with('data', $data);
+        $role = User::where('role',3)->get();
+        $data_penangkaran = Penangkaran::where('id', $id)->first();
+        $data = [
+            'data' => $data_penangkaran,
+            'role' => $role
+        ];
+        return view('penangkaran.penangkaran_edit')->with($data);
     }
 
     /**
@@ -80,19 +87,19 @@ class PenangkaranController extends Controller
         $request -> validate([
             'manager_id' => 'required|numeric',
             'lokasi_penangkaran' => 'required',
-            'jumlah_karyawan' => 'required|numeric'
+            // 'jumlah_karyawan' => 'required|numeric'
         ],[
             'manager_id.required' => 'Manager ID wajib diisi',
             'manager_id.numeric' => 'Manager ID hanya menerima input angka',
             'lokasi_penangkaran.required' => 'Lokasi penangkaran Wajib diisi',
-            'jumlah_karyawan.required' => 'Jumlah Karyawan Wajib diisi',
-            'jumlah_karyawan.numeric' => 'Jumlah Karyawan hanya menerima input angka',
+            // 'jumlah_karyawan.required' => 'Jumlah Karyawan Wajib diisi',
+            // 'jumlah_karyawan.numeric' => 'Jumlah Karyawan hanya menerima input angka',
         ]);
 
         $data = [
             'manager_id' => $request->manager_id,
             'lokasi_penangkaran' => $request->lokasi_penangkaran,
-            'jumlah_karyawan' => $request->jumlah_karyawan
+            // 'jumlah_karyawan' => $request->jumlah_karyawan
         ];
 
         Penangkaran::where('id',$id)->update($data);
