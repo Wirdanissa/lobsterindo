@@ -1,0 +1,38 @@
+.btn-gradient {
+    color: white;
+    /* background-color: red; */
+    width: 20vw;
+    height: 5vh;
+    border-radius: 30px;
+    background: linear-gradient(
+        180deg,
+        rgb(255, 74, 43) 0%,
+        rgb(255, 66, 109) 100%
+    );
+}
+
+.btn-orange {
+    color: white;
+    /* background-color: red; */
+    width: 12vw;
+    height: 5vh;
+    border-radius: 30px;
+    background: #ff4a2b;
+}
+.btn-orange:hover {
+    color: black;
+    /* background-color: red; */
+    width: 12vw;
+    height: 5vh;
+    border-radius: 30px;
+    background: #ff4a2b;
+    font-size: bold;
+}
+
+.btn-gradient:hover {
+    font-weight: bold;
+}
+
+.bg-body-secondary {
+    padding: 2rem;
+}

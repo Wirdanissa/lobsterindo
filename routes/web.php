@@ -46,6 +46,7 @@ Route::resource('pembayaran', PembayaranController::class);
 Route::get('/login', function(){
     return view('menu.login');
 });
+
 Route::get('/register', function(){
     return view('menu.register');
 });
