@@ -64,7 +64,9 @@ Route::get('/changepw', function(){
 Route::get('/stock', function(){
     return view('admin.admin_gudang.admin_stock');
 });
-
+Route::get('/edit_profile', function(){
+    return view('profile.edit_profile');
+});
 // function untuk membuat data karyawan / user yang terhubung dengan penangkaran
 // Route::get('tes', function(){
 //     $user = User::find(1);
