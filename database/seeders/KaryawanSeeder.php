@@ -16,13 +16,13 @@ class KaryawanSeeder extends Seeder
     public function run(): void
     {
         DB::table('karyawan')->insert([
-            'id_penangkaran'=>'1',
-            'id_user'=>'1'
+            'penangkaran_id'=>'1',
+            'user_id'=>'1'
         ]);
-        
+
         DB::table('karyawan')->insert([
-            'id_penangkaran'=>'1',
-            'id_user'=>'2'
+            'penangkaran_id'=>'1',
+            'user_id'=>'2'
         ]);
             // $table->unsignedBigInteger('id_penangkaran');
             // $table->foreign('id_penangkaran')->references('id')->on('penangkaran');

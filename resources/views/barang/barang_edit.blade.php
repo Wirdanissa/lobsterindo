@@ -5,9 +5,10 @@
 @section('content')
 <div class="m-5">
 
-    <form method="POST" action="{{ '/barang/'.$data->id }}">
+    <form method="POST" action="{{ '/barang/'.$data->id }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
+        <br><br>
         <a href="/barang" class="btn btn-secondary">Kembali</a>
         <div class="mb-3">
             <h4>id_penangkaran : {{ $data->id_penangkaran }}</h4>
@@ -31,6 +32,11 @@
         <div class="mb-3">
             <label for="deskripsi" class="form-label">deskripsi</label>
             <input class="form-control" id="deskripsi" rows="3" name="deskripsi" value="{{ $data->deskripsi }}" >
+        </div>
+        <img style="max-height: 150px" src="{{ url('foto_barang/'.$data->image) }}" alt="">
+        <div class="mb-3">
+            <label for="foto" class="form-label">Foto Barang</label>
+            <input type="file" class="form-control" id="foto" name="foto">
         </div>
         <div class="mb-3">
             <button type="submit" class="btn btn-primary">Update</button>

@@ -6,8 +6,9 @@
 
 <div class="m-5">
 
-    <form method="POST" action="/barang">
+    <form method="POST" action="/barang" enctype="multipart/form-data">
         @csrf
+        <br><br>
         <div class="mb-3">
             <label for="id_penangkaran" class="form-label">id_penangkaran</label>
             <input type="text" class="form-control" id="id_penangkaran" name="id_penangkaran" value="{{ Session::get('id_penangkaran') }}">
@@ -27,6 +28,10 @@
         <div class="mb-3">
             <label for="harga" class="form-label">harga</label>
             <input type="number" class="form-control" id="harga" name="harga" value="{{ Session::get('harga') }}">
+        </div>
+        <div class="mb-3">
+            <label for="foto" class="form-label">Foto Barang</label>
+            <input type="file" class="form-control" id="foto" name="foto">
         </div>
         <div class="mb-3">
             <label for="deskripsi" class="form-label">deskripsi</label>

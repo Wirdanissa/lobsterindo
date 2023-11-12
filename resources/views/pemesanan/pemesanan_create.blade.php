@@ -6,7 +6,7 @@
 
 <div class="m-5">
 
-    <form method="POST" action="/barang">
+    <form method="POST" action="/pemesanan">
         @csrf
         <h1>Id barang = {{ $data->id }}</h1>
         <div class="mb-3">

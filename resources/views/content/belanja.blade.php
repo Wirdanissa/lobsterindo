@@ -5,11 +5,12 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 <div class="m-5">
-    <a class="m-2 btn btn-primary" href="/barang/create">Tambah</a>
+    <a class="mt-5 btn btn-primary" href="/barang/create">Tambah</a>
     <table class="table">
         <thead>
             <tr>
-                <th>id</th>
+                {{-- <th>id</th> --}}
+                <th>foto</th>
                 <th>id_penangkaran</th>
                 <th>nama_barang</th>
                 <th>jumlah_barang</th>
@@ -22,7 +23,12 @@
         <tbody>
             @foreach ($data as $item )
                 <tr>
-                    <td>{{ $item->id }}</td>
+                    {{-- <td>{{ $item->id }}</td> --}}
+                    <td>
+                        @if ($item->image)
+                            <img style="max-height: 50px" src="{{ url('foto_barang/'.$item->image) }}" alt="">
+                        @endif
+                </td>
                     <td>{{ $item->id_penangkaran }}</td>
 
                     {{-- Syntax untuk memanggil table yang terhubung dengan item --}}

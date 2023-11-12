@@ -9,5 +9,5 @@
 @endif
 
 @if (Session::get('success'))
-    <div class="alert alert-success">{{ Session::get('success') }}</div>
+    <div class="mt-5 alert alert-success">{{ Session::get('success') }}</div>
 @endif
