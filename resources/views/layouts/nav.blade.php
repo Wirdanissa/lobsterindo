@@ -23,7 +23,7 @@
                             <a class="nav-link" href="{{ url('/budidaya') }}">Budidaya</a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link" href="{{ url('/belanja') }}">Belanja</a>
+                            <a class="nav-link" href="{{ url('/barang') }}">Belanja</a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link" href="{{ url('/riwayat') }}">Riwayat Belanja</a>

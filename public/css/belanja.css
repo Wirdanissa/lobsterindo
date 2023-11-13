@@ -1,4 +1,4 @@
-.katalog{
+.katalog {
     width: 480px;
     height: 193px;
     background-color: #d6d6d6;
@@ -6,14 +6,14 @@
     color: rgb(48, 48, 48);
 }
 
-.image{
+.image {
     width: 150px;
     height: 150px;
     background-color: aliceblue;
     border-radius: 30px;
 }
-.stock{
-    background-color: #FF4A2B;
+.stock {
+    background-color: #ff4a2b;
     color: white;
     height: 2rem;
     border-radius: 15px;
@@ -21,11 +21,11 @@
     align-items: center;
     justify-content: center;
 }
-.harga{
+.harga {
     /* font-family: Poppins; */
     font-size: 20px;
     font-weight: bolder;
-    color: #FF4A2B;
+    color: #ff4a2b;
 }
 
 .btn-gradient {
@@ -42,4 +42,62 @@
         rgb(255, 74, 43) 0%,
         rgb(255, 66, 109) 100%
     );
+}
+
+.img-big {
+    width: 100%;
+    height: 20rem;
+    background-color: #d6d6d6;
+    position: absolute;
+    top: 0;
+}
+
+/* sadas  */
+
+.btn-gradient {
+    color: white;
+    /* background-color: red; */
+    width: 20vw;
+    height: 5vh;
+    border-radius: 30px;
+    background: linear-gradient(
+        180deg,
+        rgb(255, 74, 43) 0%,
+        rgb(255, 66, 109) 100%
+    );
+}
+
+.btn-orange {
+    color: white;
+    /* background-color: red; */
+    width: 12vw;
+    height: 5vh;
+    border-radius: 30px;
+    background: #ff4a2b;
+}
+.btn-orange:hover {
+    color: black;
+    /* background-color: red; */
+    width: 12vw;
+    height: 5vh;
+    border-radius: 30px;
+    background: #ff4a2b;
+    font-size: bold;
+}
+
+.btn-gradient:hover {
+    font-weight: bold;
+}
+
+.bg-body-secondary {
+    padding: 2rem;
+}
+
+.img-input {
+    background-color: #d6d6d6;
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
 }

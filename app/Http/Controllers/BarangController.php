@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\barang;
+use App\Models\Penangkaran;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
@@ -14,9 +15,14 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $data = barang::all();
-        return view('content.belanja')->with('data', $data);
-        // return view('menu.belanja')->with('data', $data);
+        $barang = barang::all();
+        $penangkaran = Penangkaran::all();
+        $data = [
+            'barang' => $barang,
+            'penangkaran' => $penangkaran
+        ];
+        // return view('content.belanja')->with('data', $data);
+        return view('menu.belanja')->with($data);
     }
 
     /**
@@ -24,7 +30,8 @@ class BarangController extends Controller
      */
     public function create()
     {
-        return view('barang\barang_create');
+        $data = Penangkaran::all();
+        return view('barang\barang_create')->with('data',$data);
     }
 
     /**
@@ -97,8 +104,13 @@ class BarangController extends Controller
      */
     public function edit(string $id)
     {
-        $data = barang::where('id', $id)->first();
-        return view('barang/barang_edit')->with('data', $data);
+        $barang = barang::where('id', $id)->first();
+        $penangkaran = Penangkaran::all();
+        $data = [
+            'barang' => $barang,
+            'penangkaran' => $penangkaran
+        ];
+        return view('barang/barang_edit')->with($data);
     }
 
     public function tambah(string $id)

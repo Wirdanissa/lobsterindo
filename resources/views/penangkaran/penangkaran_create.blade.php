@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 <link rel="stylesheet" href="{{ asset('css/penangkaran.css') }}">
 
-<div class="mb-4 rounded-5 bg-body-secondary" style="width: 50%; margin: auto; margin-top: 4rem">
+<div class="mb-4 rounded-5 bg-body-secondary" style="width: 50%; margin: auto; margin-top: 7rem">
       <div class="">
         <div class="row">
           <div class="col-md-12">
@@ -27,7 +27,7 @@
                     <select class="form-select rounded-3 border" aria-label="Default select example" name="manager_id">
                       <option disabled selected>Pilih Manager</option>
                       @foreach ( $data as $item )
-                        <option value="{{ $item->id }}">{{$item->nama_user}}</option>
+                        <option value="{{ $item->id }}"> {{$item->nama_user}}</option>
                       @endforeach
                     </select>
                   </div>

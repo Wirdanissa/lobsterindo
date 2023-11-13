@@ -1,3 +1,4 @@
+
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -9,5 +10,5 @@
 @endif
 
 @if (Session::get('success'))
-    <div class="mt-5 alert alert-success">{{ Session::get('success') }}</div>
+    <div class=" alert alert-success">{{ Session::get('success') }}</div>
 @endif

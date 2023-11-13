@@ -50,7 +50,7 @@ class PenangkaranController extends Controller
         $data = [
             'manager_id' => $request->manager_id,
             'lokasi_penangkaran' => $request->lokasi_penangkaran,
-            'jumlah_karyawan' => $request->jumlah_karyawan
+            'jumlah_karyawan' => 0
         ];
 
         Penangkaran::create($data);
