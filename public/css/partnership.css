@@ -1,14 +1,17 @@
-.circle1{
-    position: absolute;
-    top: 50px;
-    width: 116px;
-    height: 116px;
-    flex-shrink: 0;
-    background-color: #FF416C;
-    z-index: 1000;
-}
-.tes{
-    position: relative;
-    width: 100px;
-    height: 100px;;
-}
+.card-lobster {
+    height: 180px;
+    width: 180px;
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px;
+  }
+
+  .background-partnership{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+    background-size: 100% !important;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }

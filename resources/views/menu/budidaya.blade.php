@@ -2,11 +2,8 @@
 @section('title', 'Belanja')
 <link rel="stylesheet" href="{{ asset('css/budidaya.css') }}">
 @section('content')
-
-    <div style="background-image: url('{{url('images/lobsterthumbnail.png')}}')" class="bg-img shadow"></div>
-    <div style="margin-top: 30rem">
+<div style="background-image: url('images/lobsterthumbnail.png')" class="bg-img shadow"></div>
     <section id="content">
-        {{-- <img src="{{url('images/lobsterthumbnail.png')}}" alt=""> --}}
       <div class="container text-center p-3 mt-5 mb-5">
         <h2 class="fw-bold">
           Lorem Ipsum is simpl text <br />
@@ -20,8 +17,8 @@
             </p>
           </div>
           <div class="col-md-7 mx-auto">
-            <a href="intro.html" type="button" class="btn border-danger rounded-5 fw-bold" style="width: 30%; margin-right: 20px">MULAI</a>
-            <a href="" type="button" class="btn border-danger rounded-5 fw-bold" style="width: 30%; margin-left: 20px;">YOUTUBE</a>
+            <a href="{{ '/Budidaya/intro' }}" type="button" class="btn border-danger rounded-5 fw-bold" style="width: 30%; margin-right: 20px">MULAI</a>
+            <a href="https://www.youtube.com/" type="button" class="btn border-danger rounded-5 fw-bold" style="width: 30%; margin-left: 20px">YOUTUBE</a>
           </div>
         </div>
       </div>
@@ -39,11 +36,11 @@
                 industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
                 but also the leap into
               </p>
-              <a href="habitat.html" type="button" class="btn border-danger rounded-5 fw-bold ms-auto d-block mb-5" style="width: 30%; margin-left: 20px; color: #dc3545">MARI PELAJARI</a>
+              <a href="{{ '/Budidaya/habitat' }}" type="button" class="btn border-danger rounded-5 fw-bold ms-auto d-block mb-5" style="width: 30%; margin-left: 20px; color: #dc3545">MARI PELAJARI</a>
             </main>
           </div>
           <div class="col-md-6">
-            <div style="background-image: url('{{url('images/habitatutama.png')}}')" class="about-img shadow"></div>
+            <div style="background-image: url('images/habitatutama.png')" class="about-img shadow"></div>
           </div>
         </div>
       </div>
@@ -55,7 +52,7 @@
       <div class="container mt-5 mb-5">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <div style="background-image: url('{{url('images/habitatutama.png')}}')" class="about-img shadow"></div>
+            <div style="background-image: url('images/pemijahan.png')" class="about-img shadow"></div>
           </div>
           <div class="col-md-6 ps-5">
             <main class="content text-end mt-5">
@@ -69,7 +66,7 @@
                 but also the leap into
               </p>
             </main>
-            <a href="pemijahan.html" type="button" class="btn border-danger rounded-5 fw-bold ms-auto mb-5" style="width: 30%; margin-left: 20px; color: #dc3545">MARI PELAJARI</a>
+            <a href="{{ '/Budidaya/pemijahan' }}" type="button" class="btn border-danger rounded-5 fw-bold ms-auto mb-5" style="width: 30%; margin-left: 20px; color: #dc3545">MARI PELAJARI</a>
           </div>
         </div>
       </div>
@@ -90,7 +87,7 @@
               </p>
             </main>
           </div>
-          <div style="background-image: url('{{url('images/datapenjualan.jpeg')}}')" class="about-img-big shadow"></div>
+          <div style="background-image: url('images/datapenjualan.jpeg')" class="about-img-big shadow"></div>
           <div class="col-md-12">
             <p class="mt-3 mb-3">Data penjualanan Mitra. 2019</p>
             <p class="mt-3 mb-3">
@@ -109,7 +106,7 @@
       <div class="container mt-5 mb-5">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <div style="background-image: url('{{url('images/pembesaranlobster.jpeg')}}')" class="about-img shadow"></div>
+            <div style="background-image: url('images/pembesaranlobster.jpeg')" class="about-img shadow"></div>
           </div>
           <div class="col-md-6 ps-5">
             <main class="content text-end mt-5">
@@ -120,7 +117,7 @@
                 but also the leap into
               </p>
             </main>
-            <a href="pembesaran.html" type="button" class="btn border-danger rounded-5 fw-bold ms-auto mb-5" style="width: 30%; margin-left: 20px; color: #dc3545">MARI PELAJARI</a>
+            <a href="{{ '/Budidaya/pembesaran' }}" type="button" class="btn border-danger rounded-5 fw-bold ms-auto mb-5" style="width: 30%; margin-left: 20px; color: #dc3545">MARI PELAJARI</a>
           </div>
         </div>
       </div>
@@ -132,7 +129,7 @@
       <div class="container mt-5 mb-5">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <div style="background-image: url('{{url('images/timlobster.jpeg')}}')" class="about-img shadow"></div>
+            <div style="background-image: url('images/timlobster.jpeg')" class="about-img shadow"></div>
           </div>
           <div class="col-md-6 ps-5">
             <main class="content text-end mt-5">
@@ -146,13 +143,10 @@
                 but also the leap into
               </p>
             </main>
-            <a href="tim.html" type="button" class="btn border-danger rounded-5 fw-bold ms-auto mb-5" style="width: 30%; margin-left: 20px; color: #dc3545; ">MARI PELAJARI</a>
+            <a href="https://wa.me/+6281213408596" type="button" class="btn border-danger rounded-5 fw-bold ms-auto mb-5" style="width: 20vw; margin-left: 20px; color: #dc3545">HUBUNGI KAMI VIA WHATSAPP</a>
           </div>
         </div>
       </div>
     </section>
-    <!--Content End-->
-</div>
-    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> --}}
-
+  <!-- </section> -->
 @endsection

@@ -84,6 +84,11 @@ class PemesananController extends Controller
     /**
      * Display the specified resource.
      */
+    public function riwayat(){
+        $data = Pemesanan::where('id_user',1)->get();
+        return view('menu.riwayat_belanja')->with('data', $data);
+    }
+
     public function show(string $id)
     {
         //

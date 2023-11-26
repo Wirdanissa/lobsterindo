@@ -3,7 +3,6 @@
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/budidaya.css') }}">
-
 <div class="container-education-site">
     <div class="row">
 
@@ -23,9 +22,9 @@
               <a class="sidebar-link" href="{{ '/Budidaya/lobster' }}"> Lobster Air Tawar </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link active" href="{{ '/Budidaya/habitat' }}"> Habitat </a>
+              <a class="sidebar-link" href="{{ '/Budidaya/habitat' }}"> Habitat </a>
             </li>
-            <li class="sidebar-item">
+            <li class="sidebar-item active">
               <a class="sidebar-link" href="{{ '/Budidaya/makanan' }}"> Makanan </a>
             </li>
             <li class="sidebar-item">
@@ -52,8 +51,8 @@
               <div class="row align-items-center">
                   <div class="col-md-12">
                   <main class="content">
-                      <img src="../images/habitat.jpeg" alt="" style="height: auto; width: 100%; margin-top: 3rem;">
-                      <h2 class="fw-bold mt-5">3. Habitat</h2>
+                      <img src="../images/makanan.jpeg" alt="" style="height: auto; width: 100%; margin-top: 3rem;">
+                      <h2 class="fw-bold mt-5">4. Makanan</h2>
                       <p class="fw-bold">industry. Lorem Ipsum has been the industry's</p>
                       <p class="mt-3 mb-5">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                   </main>
@@ -70,4 +69,5 @@
       </main>
     </div>
   </div>
+
 @endsection

@@ -2,28 +2,90 @@
 @section('title', 'Belanja')
 
 @section('content')
-<link rel="stylesheet" href="css/partnership.css">
-    <svg xmlns="http://www.w3.org/2000/svg" width="84" height="116" viewBox="0 0 84 116" fill="none">
-        <circle cx="26" cy="58" r="58" fill="url(#paint0_linear_29_64)"/>
-        <defs>
-          <linearGradient id="paint0_linear_29_64" x1="7.5" y1="39.5" x2="84" y2="163" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#FF416C"/>
-            <stop offset="0.269975" stop-color="#FF416C"/>
-            <stop offset="1" stop-color="white"/>
-          </linearGradient>
-        </defs>
-      </svg>
-      
-      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="30" cy="30" r="30" transform="rotate(-90 30 30)" fill="url(#paint0_linear_29_63)"/>
-        <defs>
-        <linearGradient id="paint0_linear_29_63" x1="30" y1="31.6667" x2="-4.47369" y2="1.92982" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#FF4A2B"/>
-        <stop offset="0.269975" stop-color="#FF4A2B"/>
-        <stop offset="1" stop-color="white"/>
-        </linearGradient>
-        </defs>
-        </svg>
-        
+<link rel="stylesheet" href="{{ URL('css/partnership.css')}}">
+<section style=" background-size: 100%; background-image: url(images/Partnershipbg.png);" class="container-flex p-5 background-partnership"
+id="portfolio">
+<div class="row mt-5 py-3">
+  <div class="mt-5 col-12 d-flex flex-column text-center justify-content-center">
+    <h2>PARTNERSHIP</h2>
+    <h5 class="text-secondary fw-normal py-2 fst">Cari tau tentang partnership kami.</h5>
+  </div>
+  <div class="row mt-5 mx-0 justify-content-center align-items-center g-4">
+    <div class="col-lg-3 col-md-4 col-12">
+      <center>
+        <div style="background-size: 180px; background-image: url('images/sangseafood.png')"
+          class="card-lobster shadow">
+          <!-- <img src="imG/sangseafood.png" class="img-fluid" alt="portfolio-img" /> -->
+        </div>
+        <div class="card-body text-center">
+          <h6 class="card-title mt-2">
+            Sang Seafood <br />
+            De Meer <br />
+            ( Surabaya )
+          </h6>
+        </div>
+      </center>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <center>
+        <div style="background-size: 130px; background-image: url('images/DragonHotPot.png')"
+          class="card-lobster shadow"></div>
+        <div class="card-body text-center">
+          <h6 class="card-title mt-2">
+            Dragon Hotpot <br />
+            ( Surabaya )
+          </h6>
+        </div>
+      </center>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <center>
+        <div style="background-size: 180px; background-image: url('images/indragiri.jpg')"
+          class="card-lobster shadow"></div>
+        <div class="card-body text-center">
+          <h6 class="card-title mt-2">
+            Rumah Makan <br />
+            Indragiri <br />
+            ( Surabaya )
+          </h6>
+        </div>
+      </center>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <center>
+        <div style="background-size: 130px; background-image: url('images/layar.png')"
+          class="card-lobster shadow"></div>
+        <div class="card-body text-center">
+          <h6 class="card-title mt-2">
+            Layar Seafood <br />
+            ( Surabaya )
+          </h6>
+        </div>
+      </center>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <center>
+        <div style="background-size: 130px; background-image: url('images/rajalobster.png')"
+          class="card-lobster shadow"></div>
+        <div class="card-body text-center">
+          <h6 class="card-title mt-2">Raja Lobster <br />( Surabaya )</h6>
+        </div>
+      </center>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <center>
+        <div style="background-size: 180px; background-image: url('images/Xiang\ Fu\ Hai\ Cuisine.png')"
+          class="card-lobster shadow"></div>
+        <div class="card-body text-center">
+          <h6 class="card-title mt-2">
+            Xiang Fu Hai Cuisine <br />
+            ( Surabaya )
+          </h6>
+        </div>
+      </center>
+    </div>
+  </div>
+</div>
+</section>
 
 @endsection

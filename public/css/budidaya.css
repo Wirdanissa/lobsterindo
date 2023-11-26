@@ -1,224 +1,169 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 html {
-    scroll-behavior: smooth;
-}
-
-/* Navbar Styling */
-nav {
-    height: 10vh;
-    width: 100%;
-    flex-shrink: 0;
-    box-shadow: 0px 8px 20px #888888;
-    z-index: 6;
-}
-
-li a {
-    /* Menu_Navbar */
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    /* color: white;
-      font-size: 14px;
-      text-decoration: none;
-      margin: 15px 0; */
-}
-.profile {
-    width: 56px;
-    height: 56px;
-    flex-shrink: 0;
-}
-
-.nav-link {
-    font-weight: normal;
-}
-
-.nav-link:hover {
-    color: white;
-    font-weight: bold;
-}
-
-.nav-link.active {
-    color: #dc3545;
+  scroll-behavior: smooth;
 }
 
 /* Content Styling */
 .content-container {
-    position: relative;
+  position: relative;
 }
 
 .sidebar {
-    height: auto;
-    width: 350px;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #efefef;
+  height: auto;
+  width: 350px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #efefef;
 }
 
 .sidebar a {
-    padding: 10px;
-    text-decoration: none;
-    list-style-type: none;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  padding: 10px;
+  text-decoration: none;
+  list-style-type: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
 .sidebar h2 {
-    margin-top: 3rem;
-    color: black;
-    text-align: center;
+  margin-top: 3rem;
+  color: black;
+  text-align: center;
 }
 
 .sidebar h2 span {
-    color: #dc3545;
-    text-align: center;
+  color: #dc3545;
+  text-align: center;
 }
 
 .bg-img {
-    position: absolute;
-    top: 0;
-    height: 60vh;
-    width: 100%;
-    filter: brightness(0.6);
-    top: 0;
-    object-fit: cover;
-    left: 0;
-    z-index: -1;
-    background-color: #efefef;
-    background-size: 100% 100vh;
-    background-position: center;
+  height: 50vh;
+  width: 100%;
+  filter: brightness(0.6);
+  top: 0;
+  object-fit: cover;
+  left: 0;
+  z-index: -1;
+  background-color: #efefef;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container h2 span {
-    color: #dc3545;
-}
-
-.footer {
-    background: linear-gradient(to right, #ff4b2b, #ff416c);
-    padding: 20px 0;
-    color: #ffffff;
-    font-family: "Poppins";
-    font-size: 14px;
-    /* text-align: center; */
-    border-top: 1px solid black;
-    padding: 10vh;
-    padding-left: 20vh;
-}
-.div_logo {
-    /* background-color: red; */
-    /* background-color: rgb(255, 0, 255); */
-}
-.logo {
-    position: absolute;
-    bottom: 30px;
-    width: 282px;
-    /* height: 100%; */
-    clip: rect(80px, 250px, 200px, 40px);
-    /* background-color: red; */
-    /* top: ; */
-    /* width: 100%; */
-    /* clip-path: inset(5px, 10px, 10px, 10px); */
-}
-
-.logo_bahasa {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-}
-.bahasa {
-    position: relative;
-    top: 140px;
-    height: 100px;
-}
-.footer-content {
-    /* background-color: red; */
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* align-items: normal; */
-    justify-content: left;
-}
-
-.sosmed a .img {
-    width: 35px;
-    height: 35px;
-    margin: 5px;
-    /* display: inline; */
-    background-color: red;
-    -webkit-mask: src= "images/instagram.png";
-}
-
-.sosmed a img {
-    margin: 5px;
-}
-
-.footer p {
-    margin: 0;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: left;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-.footer-links li {
-    /* display: inline-block; */
-    /* font-size: 14px; */
-    display: flex;
-    justify-content: left;
-    /* margin: 0 5px; */
-    /* background-color: purple; */
-}
-
-.footer-links li a {
-    font-weight: 250;
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0;
-}
-
-.footer-links li a:hover {
-    color: #1b1b1b;
-    font-weight: 300;
+  color: #dc3545;
 }
 
 .about-img {
-    height: 354px;
-    width: 628px;
-    background-color: #1b1b1b;
-    background-size: 100%;
-    background-position: center;
+  height: 354px;
+  width: 628px;
+  background-color: #1b1b1b;
+  background-size: 100%;
+  background-position: center;
 }
 
 .about-img-big {
-    width: 1266px;
-    height: 714px;
-    background-color: #1b1b1b;
-    background-size: 100%;
+  width: 1266px;
+  height: 714px;
+  background-color: #1b1b1b;
+  background-size: 100%;
 }
-.border-danger {
-    background-color: white;
-    color: #dc3545;
+
+.background {
+  height: 100%;
+  width: 100%;
+  background-color: #efefef;
+  background-size: 100%;
+  background-position: center;
 }
-.border-danger:hover {
-    background-color: red !important;
-    color: white !important;
+
+
+/* Css lobsterindo education site */
+
+.container-education-site{
+  margin-top: 9vh;
+  z-index: -2;
+}
+
+/* Navbar Styling */
+.sidebar {
+  width: 100%;
+  box-shadow: 0px 0px 20px #888888;
+  z-index: -1;
+}
+
+/* Content Styling */
+.content-container {
+  position: relative;
+}
+
+.sidebar {
+  height: auto;
+  width: 350px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #efefef;
+}
+
+.sidebar a {
+  padding: 10px;
+  text-decoration: none;
+  list-style-type: none;
+  color: #818181 !important;
+  display: block;
+  transition: 0.3s;
+  text-align: left;
+  padding-left: 3vw;
+}
+.sidebar-item a{
+
+}
+.sidebar .active {
+  color: #FF4A2B !important;
+  font-weight:bolder;
+}
+
+.sidebar a:hover {
+  color: #000000 !important;
+}
+
+.sidebar h2 {
+  margin-top: 3rem;
+  color: black;
+  text-align: center;
+}
+
+.sidebar h2 span {
+  color: #dc3545;
+  text-align: center;
+}
+
+.bg-img {
+  height: 50vh;
+  width: 100%;
+  filter: brightness(0.6);
+  top: 0;
+  object-fit: cover;
+  left: 0;
+  z-index: -1;
+  background-color: #efefef;
+  background-size: 100% 100vh;
+  background-position: center;
+}
+
+.container h2 span {
+  color: #dc3545;
 }

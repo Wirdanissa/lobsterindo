@@ -5,22 +5,22 @@
     font-family: 'Poppins';
     font-size: 14px;
     /* text-align: center; */
-    border-top: 1px solid black;
-    margin-top: 5vh; /* Menggunakan unit viewport height untuk margin-top */
+    /* border-top: 1px solid black; */
+    /* margin-top: 5vh;  */
     padding: 10vh;
     padding-left: 20vh;
   }
-  .div_logo{
-    /* background-color: red; */
-    /* background-color: rgb(255, 0, 255); */
 
+  /* .div_logo{
+    background-color: red;
+    background-color: rgb(255, 0, 255);
+  } */
 
-  }
   .logo {
-    position: absolute;
-    bottom: 30px;
-    width: 282px;
-    /* height: 100%; */
+    /* position: absolute; */
+    /* bottom: 30px; */
+    /* width: 10vh; */
+    height: 40vh;
     clip: rect(80px,250px,200px,40px);
     /* background-color: red; */
     /* top: ; */
@@ -94,7 +94,7 @@
     text-decoration: none;
     margin: 0;
 
-}
+  }
 
   .footer-links li a:hover {
     color: #1b1b1b;

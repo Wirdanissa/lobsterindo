@@ -20,7 +20,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('content/home');
+    return view('menu.beranda');
+});
+
+Route::get('/Partnership', function () {
+    return view('menu.partnership');
+});
+
+Route::get('/Budidaya', function () {
+    return view('menu.budidaya');
 });
 
 Route::resource('barang', BarangController::class);
@@ -38,6 +46,8 @@ Route::match(['put', 'patch'], 'user/{barang}/password', [UserController::class,
 
 Route::resource('pemesanan', PemesananController::class);
 Route::get('pemesanan/{barang}/create', [PemesananController::class, 'create']);
+Route::get('RiwayatBelanja', [PemesananController::class, 'riwayat']);
+
 
 Route::resource('penangkaran', PenangkaranController::class);
 
@@ -68,6 +78,33 @@ Route::get('/stock', function(){
 Route::get('/edit_profile', function(){
     return view('profile.edit_profile');
 });
+
+
+Route::get('/Budidaya/intro', function(){
+    return view('budidaya.intro');
+});
+Route::get('/Budidaya/lobster', function(){
+    return view('budidaya.lobster-airtawar');
+});
+Route::get('/Budidaya/habitat', function(){
+    return view('budidaya.habitat');
+});
+Route::get('/Budidaya/makanan', function(){
+    return view('budidaya.makanan');
+});
+Route::get('/Budidaya/ukuran', function(){
+    return view('budidaya.ukuran');
+});
+Route::get('/Budidaya/pemijahan', function(){
+    return view('budidaya.pemijahan');
+});
+Route::get('/Budidaya/pembesaran', function(){
+    return view('budidaya.pembesaran');
+});
+Route::get('/Budidaya/penjualan', function(){
+    return view('budidaya.penjualan');
+});
+
 // function untuk membuat data karyawan / user yang terhubung dengan penangkaran
 // Route::get('tes', function(){
 //     $user = User::find(1);

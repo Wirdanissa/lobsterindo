@@ -13,7 +13,7 @@
     <div>
         @include('layouts.nav')
         <main class="pt-2">
-            <div style="margin-top: 8rem" class="ms-5 me-5">
+            <div class="ms-5 me-5">
                 @include('component\error_alert')
             </div>
             @yield('content')
