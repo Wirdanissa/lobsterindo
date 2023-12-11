@@ -1,0 +1,67 @@
+.katalog {
+    width: 34vw;
+    height: 28vh;
+    background-color: aliceblue;
+    border-radius: 30px;
+    color: rgb(48, 48, 48);
+}
+
+/* .katalog {
+    width: 27vw;
+    height: 20vh;
+    background-color: aliceblue;
+    border-radius: 30px;
+    color: rgb(48, 48, 48);
+} */
+
+.image {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    background-size: 100px 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.title b {
+    margin-top: 30vh;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+
+.stock {
+    background-color: #ff4a2b;
+    color: white;
+    height: 2rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.harga {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #ff4a2b;
+}
+.no-rek {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #ff4a2b;
+}
+
+.title b{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.box-create{
+    background-color: aliceblue;
+    padding: 2rem;
+}
+
+.box-form{
+    background-color: white;
+}

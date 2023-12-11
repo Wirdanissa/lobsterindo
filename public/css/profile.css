@@ -1,0 +1,50 @@
+.container-profile {
+    margin-top: 10vh;
+    padding: 5vh;
+    display: flex;
+    justify-content: center;
+    /* background-color: antiquewhite; */
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.title-desc {
+    text-align: center;
+    width: 26vw;
+}
+
+.box {
+    background-color: aliceblue;
+    padding: 3rem;
+    border-radius: 30px;
+}
+
+.img-profile {
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 184px;
+    height: 184px;
+    flex-shrink: 0;
+    background-color: aqua;
+    border-radius: 100px;
+}
+
+.profile-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.change-password{
+    color: #ff4a2b;
+    text-decoration: none;
+}
+
+.change-password:hover{
+    color: #000000;
+    text-decoration: none;
+}

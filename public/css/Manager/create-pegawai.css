@@ -1,0 +1,11 @@
+.box-create-pegawai{
+    background-color: aliceblue;
+    margin: 5vh;
+    padding: 5vh;
+    border-radius: 30px;
+    width: 80vh;
+}
+.title b{
+    font-size: 1.8rem;
+    font-weight: 500;
+}

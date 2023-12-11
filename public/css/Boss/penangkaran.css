@@ -1,0 +1,13 @@
+.title b{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.box-create{
+    background-color: aliceblue;
+    padding: 2rem;
+}
+
+.box-form{
+    background-color: white;
+}

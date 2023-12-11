@@ -1,0 +1,36 @@
+.katalog {
+    width: 34vw;
+    height: 28vh;
+    background-color: aliceblue;
+    border-radius: 30px;
+    color: rgb(48, 48, 48);
+}
+
+/* .katalog {
+    width: 27vw;
+    height: 20vh;
+    background-color: aliceblue;
+    border-radius: 30px;
+    color: rgb(48, 48, 48);
+} */
+
+.image {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    background-size: 100px 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.title b {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.no-rek {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #ff4a2b;
+}

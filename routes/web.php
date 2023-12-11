@@ -20,15 +20,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('menu.beranda');
+    return view('Beranda');
 });
 
 Route::get('/Partnership', function () {
-    return view('menu.partnership');
+    return view('partnership');
 });
 
 Route::get('/Budidaya', function () {
-    return view('menu.budidaya');
+    return view('Budidaya');
 });
 
 Route::resource('barang', BarangController::class);

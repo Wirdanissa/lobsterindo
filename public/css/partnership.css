@@ -1,17 +1,17 @@
 .card-lobster {
-    height: 180px;
-    width: 180px;
-    background-color: aliceblue;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 30px;
-  }
+  height: 180px;
+  width: 180px;
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30px;
+}
 
-  .background-partnership{
-    background-color: antiquewhite;
-    width: 100%;
-    height: 100%;
-    background-size: 100% !important;
-    background-position: bottom;
-    background-repeat: no-repeat;
-  }
+.background-partnership{
+  background-color: antiquewhite;
+  width: 100%;
+  height: 100%;
+  background-size: 100% !important;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}

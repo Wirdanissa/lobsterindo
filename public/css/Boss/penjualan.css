@@ -1,0 +1,98 @@
+.container-penjualan{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-top: 10vh;
+    padding: 10vh;
+    /* background-color: #dc3545; */
+}
+
+.data-pemasukan{
+    /* max-width: 100vw; */
+    /* max-height: 80vh; */
+}
+
+.desc-penjualan{
+    padding: 5vh;
+    /* text-align: center; */
+    background-color: aliceblue;
+    border-radius: 30px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+/* Riwayat */
+
+.container-riwayat {
+    /* margin-top: 5vh; */
+}
+
+.katalog {
+    /* background-color: #EEE; */
+    background-color: aliceblue;
+    border-radius: 30px;
+}
+
+.img-barang {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    background-color: bisque;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.harga {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #ff4a2b;
+    font-size: 1.4rem;
+}
+
+.detail-beli {
+    color: black;
+}
+
+.detail-pengiriman {
+    color: black;
+}
+
+.detail-pengiriman p {
+    margin: 0;
+}
+
+.proses-1 {
+    width: 8vw;
+    padding: 1vh;
+    border-radius: 30px;
+    color: #ffffff;
+    background-color: #FF416C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proses-2 {
+    width: 8vw;
+    padding: 1vh;
+    border-radius: 30px;
+    color: #ffffff;
+    background-color: #FFBE41;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proses-3 {
+    width: 8vw;
+    padding: 1vh;
+    /* height: 5vh; */
+    border-radius: 30px;
+    color: #ffffff;
+    background-color: #41BBFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

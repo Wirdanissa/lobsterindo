@@ -1,0 +1,120 @@
+.container-pemesanan{
+    margin-top: 10vh;
+    /* padding-left: ; */
+}
+
+.box-pemesanan{
+    width: 100%;
+    /* height: 28vh; */
+    background-color: aliceblue;
+    border-radius: 30px;
+    color: rgb(48, 48, 48);
+    display: flex;
+    align-items: center;
+}
+.container-left{
+    
+}
+.image-pemesanan{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(85, 90, 94);
+    border-radius: 30px;
+    background-position: center;
+    background-size: 100%;
+}
+
+.stock {
+    margin-top: 2vh;
+    background-color: #ff4a2b;
+    color: white;
+    height: 2rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.harga {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #ff4a2b;
+}
+
+.box-pengiriman{
+    width: 100%;
+    /* height: 28vh; */
+    background-color: aliceblue;
+    border-radius: 30px;
+    color: rgb(48, 48, 48);
+    padding: 4vh;
+    margin-top: 3vh;
+    /* display: flex;
+    align-items: center; */
+}
+.Pembayaran{
+    margin: 10px;
+}
+.Pembayaran input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+.Pembayaran label {
+    /* display: inline-block; */
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 1px solid #FF4A2B;
+    border-radius: 15px;
+    padding: 3vh;
+    color: #FF4A2B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+ .Pembayaran label a{
+    text-decoration: none;
+    color: #181818 ;
+ } 
+ /* .Pembayaran label a:hover{
+    text-decoration: none;
+    color: #272727;
+ }  */
+ .Pembayaran label b{
+    font-weight: bolder;
+    font-size: 1.3rem;
+ } 
+    .Pembayaran label:hover {
+    background-color: #FF4A2B;
+    color: white;
+  }
+  .Pembayaran input[type="radio"]:focus+label {
+    border: 2px dashed #444;
+  }
+  
+  .Pembayaran input[type="radio"]:checked+label {
+    background: linear-gradient(90deg, #FF4A2B 37.97%, #FF416C 55.9%);
+    border-color: #FF4A2B;
+    color: white !important;
+  }
+  
+  .box-pembelian{
+    border-radius: 15px;
+    border: 1px solid #FF4A2B;
+    padding: 5vh;
+  }
+  .box-promo{
+    border-radius: 15px;
+    border: 1px solid #FF4A2B;
+    padding: 3vh;
+    margin-bottom: 4vh;
+  }
+
+  .sidebar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15vh;
+  }

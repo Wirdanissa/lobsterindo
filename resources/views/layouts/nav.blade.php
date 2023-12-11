@@ -91,4 +91,44 @@
             </svg>
         </div> -->
     </div>
-</nav> <!-- End Navbar -->
+</nav>
+<!-- End Navbar -->
+
+
+<!-- Navbar Login -->
+{{-- <nav class="navbar navbar-expand-md navbar-dark bg-white shadow-sm">
+    <div class="navbar-lobster">
+        <a class="navbar-brand" href="Beranda.html">
+            <b style="font-size: 1.3em">Lobsterindo</b>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="row align-items-center" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="Beranda.html">Beranda</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="Partnership.html">Partnership</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="Budidaya.html">Budidaya</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="Belanja.html">Belanja</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#">Riwayat Belanja</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <a href="" class="btn-signin">Login/Register</a>
+        </div>
+    </div>
+</nav> --}}
+<!-- End Navbar -->

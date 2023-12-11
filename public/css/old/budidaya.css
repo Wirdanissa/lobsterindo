@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Content Styling */
+.content-container {
+  position: relative;
+}
+
+.sidebar {
+  height: auto;
+  width: 350px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #efefef;
+}
+
+.sidebar a {
+  padding: 10px;
+  text-decoration: none;
+  list-style-type: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar h2 {
+  margin-top: 3rem;
+  color: black;
+  text-align: center;
+}
+
+.sidebar h2 span {
+  color: #dc3545;
+  text-align: center;
+}
+
+.bg-img {
+  height: 50vh;
+  width: 100%;
+  filter: brightness(0.6);
+  top: 0;
+  object-fit: cover;
+  left: 0;
+  z-index: -1;
+  background-color: #efefef;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container h2 span {
+  color: #dc3545;
+}
+
+.about-img {
+  height: 354px;
+  width: 628px;
+  background-color: #1b1b1b;
+  background-size: 100%;
+  background-position: center;
+}
+
+.about-img-big {
+  width: 1266px;
+  height: 714px;
+  background-color: #1b1b1b;
+  background-size: 100%;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background-color: #efefef;
+  background-size: 100%;
+  background-position: center;
+}
+
+
+/* Css lobsterindo education site */
+
+.container-education-site{
+  margin-top: 9vh;
+  z-index: -2;
+}
+
+/* Navbar Styling */
+.sidebar {
+  width: 100%;
+  box-shadow: 0px 0px 20px #888888;
+  z-index: -1;
+}
+
+/* Content Styling */
+.content-container {
+  position: relative;
+}
+
+.sidebar {
+  height: auto;
+  width: 350px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #efefef;
+}
+
+.sidebar a {
+  padding: 10px;
+  text-decoration: none;
+  list-style-type: none;
+  color: #818181 !important;
+  display: block;
+  transition: 0.3s;
+  text-align: left;
+  padding-left: 3vw;
+}
+.sidebar-item a{
+
+}
+.sidebar .active {
+  color: #FF4A2B !important;
+  font-weight:bolder;
+}
+
+.sidebar a:hover {
+  color: #000000 !important;
+}
+
+.sidebar h2 {
+  margin-top: 3rem;
+  color: black;
+  text-align: center;
+}
+
+.sidebar h2 span {
+  color: #dc3545;
+  text-align: center;
+}
+
+.bg-img {
+  height: 50vh;
+  width: 100%;
+  filter: brightness(0.6);
+  top: 0;
+  object-fit: cover;
+  left: 0;
+  z-index: -1;
+  background-color: #efefef;
+  background-size: 100% 100vh;
+  background-position: center;
+}
+
+.container h2 span {
+  color: #dc3545;
+}
