@@ -24,7 +24,7 @@
             </p>
           </div>
           <div class="col-md-7 mx-auto">
-            <a href="Budidaya/intro.html" type="button" class="btn border-danger rounded-5 fw-bold"
+            <a href="{{ URL('/Budidaya/intro') }}" type="button" class="btn border-danger rounded-5 fw-bold"
               style="width: 30%; margin-right: 20px">MULAI</a>
             <a href="https://www.youtube.com/" type="button" class="btn border-danger rounded-5 fw-bold"
               style="width: 30%; margin-left: 20px">YOUTUBE</a>
@@ -47,13 +47,13 @@
                 five centuries,
                 but also the leap into
               </p>
-              <a href="Budidaya/habitat.html" type="button"
+              <a href="{{ URL('Budidaya/habitat') }}" type="button"
                 class="btn border-danger rounded-5 fw-bold ms-auto d-block mb-5"
                 style="width: 30%; margin-left: 20px; color: #dc3545">MARI PELAJARI</a>
             </main>
           </div>
           <div class="col-md-6">
-            <div style="background-image: url('images/habitatutama.png')" class="about-img shadow"></div>
+            <div style="background-image: url('{{ URL('images/habitatutama.png') }}')" class="about-img shadow"></div>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
       <div class="container mt-5 mb-5">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <div style="background-image: url('images/pemijahan.png')" class="about-img shadow"></div>
+            <div style="background-image: url('{{ URL('images/pemijahan.png') }}')" class="about-img shadow"></div>
           </div>
           <div class="col-md-6 ps-5">
             <main class="content text-end mt-5">
@@ -81,7 +81,7 @@
                 but also the leap into
               </p>
             </main>
-            <a href="Budidaya/pemijahan.html" type="button" class="btn border-danger rounded-5 fw-bold ms-auto mb-5"
+            <a href="{{ URL('/Budidaya/pemijahan') }}" type="button" class="btn border-danger rounded-5 fw-bold ms-auto mb-5"
               style="width: 30%; margin-left: 20px; color: #dc3545">MARI PELAJARI</a>
           </div>
         </div>
@@ -107,7 +107,7 @@
               </p>
             </main>
           </div>
-          <div style="background-image: url('images/datapenjualan.jpeg')" class="about-img-big shadow"></div>
+          <div style="background-image: url('{{ URL('images/datapenjualan.jpeg') }}')" class="about-img-big shadow"></div>
           <div class="col-md-12">
             <p class="mt-3 mb-3">Data penjualanan Mitra. 2019</p>
             <p class="mt-3 mb-3">
@@ -130,7 +130,7 @@
       <div class="container mt-5 mb-5">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <div style="background-image: url('images/pembesaranlobster.jpeg')" class="about-img shadow"></div>
+            <div style="background-image: url('{{ URL('images/pembesaranlobster.jpeg') }}')" class="about-img shadow"></div>
           </div>
           <div class="col-md-6 ps-5">
             <main class="content text-end mt-5">
@@ -143,7 +143,7 @@
                 but also the leap into
               </p>
             </main>
-            <a href="Budidaya/pembesaran.html" type="button" class="btn border-danger rounded-5 fw-bold ms-auto mb-5"
+            <a href="{{ URL('Budidaya/pembesaran') }}" type="button" class="btn border-danger rounded-5 fw-bold ms-auto mb-5"
               style="width: 30%; margin-left: 20px; color: #dc3545">MARI PELAJARI</a>
           </div>
         </div>

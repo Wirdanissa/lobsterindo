@@ -23,7 +23,8 @@ return new class extends Migration
             // 5. kurir
             $table->string('nama_user',40);
             $table->string('no_telp',20);
-            $table->string('alamat',50);
+            $table->string('alamat',50)->nullable();
+            $table->string('image')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

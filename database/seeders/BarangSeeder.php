@@ -18,7 +18,23 @@ class BarangSeeder extends Seeder
         DB::table('barang')->insert([
             'id_penangkaran'=>'1',
             'nama_barang'=>'Lobster Air Tawar konsumsi',
-            'jumlah_barang'=>'242', // ekor
+            // 'jumlah_barang'=>'242',
+            'berat'=>'1100', //kg
+            'harga'=>'180000',
+            'deskripsi'=>'Lobster air tawar dengan ukuran siap konsumsi ( > 4inc )'
+        ]);
+        DB::table('barang')->insert([
+            'id_penangkaran'=>'1',
+            'nama_barang'=>'Lobster Air Tawar konsumsi',
+            // 'jumlah_barang'=>'242',
+            'berat'=>'1100', //kg
+            'harga'=>'180000',
+            'deskripsi'=>'Lobster air tawar dengan ukuran siap konsumsi ( > 4inc )'
+        ]);
+        DB::table('barang')->insert([
+            'id_penangkaran'=>'1',
+            'nama_barang'=>'Lobster Air Tawar konsumsi',
+            // 'jumlah_barang'=>'242',
             'berat'=>'11', //kg
             'harga'=>'180000',
             'deskripsi'=>'Lobster air tawar dengan ukuran siap konsumsi ( > 4inc )'
@@ -26,23 +42,7 @@ class BarangSeeder extends Seeder
         DB::table('barang')->insert([
             'id_penangkaran'=>'1',
             'nama_barang'=>'Lobster Air Tawar konsumsi',
-            'jumlah_barang'=>'242', // ekor
-            'berat'=>'11', //kg
-            'harga'=>'180000',
-            'deskripsi'=>'Lobster air tawar dengan ukuran siap konsumsi ( > 4inc )'
-        ]);
-        DB::table('barang')->insert([
-            'id_penangkaran'=>'1',
-            'nama_barang'=>'Lobster Air Tawar konsumsi',
-            'jumlah_barang'=>'242', // ekor
-            'berat'=>'11', //kg
-            'harga'=>'180000',
-            'deskripsi'=>'Lobster air tawar dengan ukuran siap konsumsi ( > 4inc )'
-        ]);
-        DB::table('barang')->insert([
-            'id_penangkaran'=>'1',
-            'nama_barang'=>'Lobster Air Tawar konsumsi',
-            'jumlah_barang'=>'242', // ekor
+            // 'jumlah_barang'=>'242',
             'berat'=>'11', //kg
             'harga'=>'180000',
             'deskripsi'=>'Lobster air tawar dengan ukuran siap konsumsi ( > 4inc )'

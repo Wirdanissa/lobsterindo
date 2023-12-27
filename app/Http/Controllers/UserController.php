@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
@@ -14,11 +15,43 @@ class UserController extends Controller
      */
     public function index()
     {
-        // return 123;
+        return 123;
         $data = User::all();
         return view('users.user')->with('data', $data);
     }
 
+    public function login(Request $request)
+    {
+        Session::flash('email', $request->email);
+        Session::flash('password', $request->password);
+
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:6'
+        ],[
+            'email.required' => 'Email Wajib diisi',
+            'password.required' => 'Password Wajib diisi',
+            'password.min' => 'Password minimal 6 karakter',
+            'email.email' => 'Masukan Email dengan benar'
+        ]);
+
+        $infologin = [
+            'email' => $request->input('email'),
+            'password' => $request->input('password')
+        ];
+
+        if(Auth::attempt($infologin)){
+            return redirect('/');
+        }
+        else{
+            return redirect('/login');
+        }
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/login');
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -59,7 +92,7 @@ class UserController extends Controller
             'password' => Hash::make($request->input('password'))
         ];
         User::create($data);
-        return redirect('/user')->with('success', 'Berhasil mendaftarkan user baru');
+        return redirect('/login')->with('success', 'Berhasil mendaftarkan user baru');
     }
 
     /**
@@ -67,7 +100,8 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = User::where('id', $id)->first();
+        return view('Profile')->with('data', $data);
     }
 
     /**
@@ -81,7 +115,7 @@ class UserController extends Controller
     public function edit_password(string $id)
     {
         $data = User::where('id', $id)->first();
-        return view('users.user_password')->with('data', $data);
+        return view('change-password')->with('data', $data);
     }
 
     /**
@@ -123,6 +157,26 @@ class UserController extends Controller
     {
 
     }
+
+
+    public function update_role (Request $request, string $id)
+    {
+        // return $request->input('role_id');
+        User::where('id', $id)->update(
+            ['role' => $request->input('role_id')]
+        );
+        return redirect('/karyawan')->with('success', 'Berhasil Melakukan Update');
+    }
+
+
+    public function pecat (Request $request, string $id)
+    {
+        User::where('id', $id)->update(
+            ['role' => 1]
+        );
+        return redirect('/karyawan')->with('success', 'Berhasil Melakukan Update');
+    }
+
     /**
      * Remove the specified resource from storage.
      */

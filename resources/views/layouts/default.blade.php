@@ -14,7 +14,7 @@
 <body>
     <div>
         @include('layouts.nav')
-        <main class="pt-2">
+        <main class="">
             <div class="ms-5 me-5">
                 @include('component\error_alert')
             </div>

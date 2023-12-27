@@ -4,10 +4,6 @@
   color: #ffffff;
   font-family: 'Poppins';
   font-size: 14px;
-  /* text-align: center; */
-  /* border-top: 1px solid black; */
-  margin-top: 5vh;
-  /* Menggunakan unit viewport height untuk margin-top */
   padding: 10vh;
   padding-left: 20vh;
 }
@@ -15,8 +11,6 @@
 .div_logo {
   /* background-color: red; */
   /* background-color: rgb(255, 0, 255); */
-
-
 }
 
 .logo {

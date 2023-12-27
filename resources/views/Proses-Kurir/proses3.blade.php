@@ -1,118 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.default')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@section('title', 'Beranda')
 
-<body>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/proses.css">
+@section('content')
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<link rel="stylesheet" href="{{ asset('css/proses.css') }}">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <div>
-
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-white shadow-sm">
-            <div class="navbar-lobster">
-                <a class="navbar-brand" href="../Beranda.html">
-                    <b style="font-size: 1.3em">Lobsterindo</b>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="row align-items-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item me-4">
-                            <a class="nav-link" href="../Beranda.html">Beranda</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link" href="../Partnership.html">Partnership</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link" href="../Budidaya.html">Budidaya</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link" href="../Belanja.html">Belanja</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link" href="../RiwayatBelanja.html">Riwayat Belanja</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="nav-item dropdown pe-3">
-                    <a style="display: inline-flex;" class="nav-link nav-profile pe-0 d-flex align-items-center"
-                        href="#" data-bs-toggle="dropdown">
-                        <div style="background-image: url('../images/pp.png');" class="circle"></div>
-                        <span class="d-none d-md-block dropdown-toggle ps-2">Alwan Hakim</span>
-                    </a><!-- End Profile Iamge Icon -->
-
-                    <ul class="dropdown-menu profile">
-                        <li class="dropdown-header">
-                            <h6>Alwan Hakim</h6>
-                            <span>Manager</span>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="../Profile.html">
-                                <i class="bi bi-person"></i>
-                                <span>My Profile</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="../Boss/Admin.html">
-                                <i class="bi bi-gear"></i>
-                                <span>Admin Page</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <!-- <li>
-                          <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                            <i class="bi bi-question-circle"></i>
-                            <span>Need Help?</span>
-                          </a>
-                        </li> -->
-                        <!-- <li>
-                          <hr class="dropdown-divider">
-                        </li> -->
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="../login.html">
-                                <i class="bi bi-box-arrow-right"></i>
-                                <span>Sign Out</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- <div class="profile">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                          <circle cx="28" cy="28" r="28" fill="#D2D2D2" />
-                      </svg>
-                  </div> -->
-            </div>
-        </nav> <!-- End Navbar -->
         <section>
             <div style="margin-top: 10vh;" class="container d-flex justify-content-center align-items-center">
                 <div class="box-proses">
@@ -120,13 +13,13 @@
                         STATUS PEMESANAN : PEMESANAN SELESAI
                     </div>
                     <div class="box-pemesanan p-4 row d-flex align-items-center">
-                        <div style="background-size:150px 150px; background-repeat: no-repeat; background-image: url('../images/LobsterKonsumsi.png')"
+                        <div style="background-size:150px 150px; background-repeat: no-repeat; background-image: url('{{ URL('foto_barang/'.$data->barang->image) }}')"
                             class="image col-4">
                         </div>
                         <div class="col-7 ms-4 flex-column">
-                            <b>Lobster Air Tawar Konsumsi</b>
-                            <b class="harga">Rp.180.000</b>
-                            <p>Lobster AirTawar dengan ukuran 4 sampai 6 inc</p>
+                            <div><b>{{ $data->barang->nama_barang }}</b></div>
+                            <b class="harga">Rp.{{ $data->barang->harga }}</b>
+                            <p>{{ $data->barang->deskripsi }}</p>
                         </div>
                     </div>
                     <div class="box-detail-pembayaran">
@@ -137,15 +30,15 @@
                                 Jumlah Pemesanan :
                             </div>
                             <div class="col-6 d-flex justify-content-end">
-                                4Kg
+                                {{ $data->jumlah_pemesanan }}g
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                Total Harga (4kg Barang) :
+                                Total Harga ( {{ $data->jumlah_pemesanan }}g Barang) :
                             </div>
                             <div class="col-6 d-flex justify-content-end">
-                                Rp.720.000.-
+                                Rp. {{ $data->jumlah_pemesanan/1000 *  $data->barang->harga}}.-
                             </div>
                         </div>
                         <div class="row">
@@ -153,7 +46,7 @@
                                 Total Ongkos Kirim :
                             </div>
                             <div class="col-6 d-flex justify-content-end">
-                                Rp.20.000.-
+                                Rp.{{ $data->pengiriman->ongkir }}.-
                             </div>
                         </div>
                         <div class="row">
@@ -170,13 +63,13 @@
                                 <b>Total Tagihan</b>
                             </div>
                             <div class="col-6 d-flex justify-content-end">
-                                <b class="harga">Rp.747.500.-</b>
+                                <b class="harga">Rp.{{ ($data->jumlah_pemesanan/1000 *  $data->barang->harga)+$data->pengiriman->ongkir+7500}}.-</b>
                             </div>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
                         <a style="width: 20vh;" href="../Beranda.html" class="btn btn-orange me-3">Beranda</a>
-                        <a style="width: 20vh;" href="../Kurir/MasterPengiriman.html" class="btn btn-orange">Kembali</a>
+                        <a style="width: 20vh;" href="{{ URL('/pengiriman') }}" class="btn btn-orange">Kembali</a>
                     </div>
                 </div>
                 <div class="container-pengiriman">
@@ -189,7 +82,7 @@
                                 Alamat Pengiriman :
                             </div>
                             <div class="col-6 d-flex justify-content-end">
-                                Jl.Menur 2/2C
+                                {{ $data->alamat_pengiriman }}
                             </div>
                         </div>
                         <div class="row">
@@ -197,7 +90,7 @@
                                 Waktu Pengiriman :
                             </div>
                             <div class="col-6 d-flex justify-content-end">
-                                25/10/2023 - 10.00
+                                {{ $data->tgl_pengiriman }}
                             </div>
                         </div>
                         <div class="row">
@@ -205,7 +98,7 @@
                                 Pembayaran :
                             </div>
                             <div class="col-6 d-flex justify-content-end">
-                                Gopay
+                                {{ $data->pembayaran->nama_pembayaran }}
                             </div>
                         </div>
                         <hr>
@@ -215,7 +108,7 @@
                                 Waktu Terima :
                             </div>
                             <div class="col-6 d-flex justify-content-end">
-                                25/10/2023 - 09.55
+                                {{ $data->pengiriman->created_at }}
                             </div>
                         </div>
                         <div class="row">
@@ -223,7 +116,7 @@
                                 Alamat Pengiriman :
                             </div>
                             <div class="col-6 d-flex justify-content-end">
-                                Jl.Menur 2/2C
+                                {{ $data->alamat_pengiriman }}
                             </div>
                         </div>
                         <div class="row">
@@ -231,84 +124,24 @@
                                 Nama Kurir :
                             </div>
                             <div class="col-6 d-flex justify-content-end">
-                                Naufal
+                                {{  $data->pengiriman->id_kurir }}
                             </div>
                         </div>
                         <hr>
                         <p>Nota :</p>
-                        <img class="image-nota mb-3" src="../images/nota.svg" alt="">
+                        <img class="image-nota mb-3" src="{{ URL('foto_pengiriman/foto_nota/'.$data->pengiriman->foto_nota) }}" alt="">
                         <p>Bukti Timbangan :</p>
-                        <img class="image" src="../images/timbangan.svg" alt="">
+                        <img class="image" src="{{ asset('foto_pengiriman/foto_timbangan/'.$data->pengiriman->foto_timbangan) }}" alt="">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <a style="color: white;" href="proses2.html">Back</a>
+                    <a style="color: white;" href="{{ URL('/pengiriman') }}">Back</a>
                 </div>
                 <div class="col-6 d-flex justify-content-end">
                     <a style="color: white;" href="#">Next</a>
                 </div>
             </div>
         </section>
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="">
-                <div class="footer-content">
-                    <div class="row" style="width: 100%">
-                        <div class="col">
-                            <ul class="footer-links">
-                                <p class="title">LOBSTERINDO</p>
-                                <li style="margin-bottom: 0.5rem;">Penangkaran :</li>
-                                <li><a href="#">Jl. Tambak Medokan ayu VIC/68 (Surabaya)</a></li>
-                                <li><a href="#">Menur 2/2C (Surabaya)</a></li>
-                                <li><a href="#">Lamongan (Lamongan)</a></li>
-                                <li><a href="#">Sragen (Sragen)</a></li>
-                                <li><a href="#">Bandung (Bandung)</a></li>
-                                <li><a href="#">Padang (Padang)</a></li>
-                                <li><a href="#">Samarinda (Samarinda)</a></li>
-                                <br>
-                                <p>&copy; 2023 Lobster Indo</p>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <ul class="footer-links">
-                                <li style="margin-bottom: 0.5rem;">Layanan Kami :</li>
-                                <li><a href="#">Pembelian Lobster air tawar</a></li>
-                                <li><a href="#">Tatacara Budidaya</a></li>
-                                <li><a href="#">Join Partnership</a></li>
-                                <li><a href="#">Join our Member</a></li>
-                                <li style="margin-bottom: 10px"><a href="#">Tentang kami</a></li>
-                                <li>Ikuti Kami</li>
-                                <li class="sosmed">
-                                    <a href=""><img src="images/instagram.png" alt=""></a>
-                                    <a href=""><img src="images/facebook.png" alt=""></a>
-                                    <a href=""><img src="images/twitter.png" alt=""></a>
-                                </li>
-                            </ul>
-
-                        </div>
-                        <div class="col-4 position-relative logo_bahasa">
-                            <div class="logo" style=" background-image: url('images/lobsterindoputih.png');">
-                            </div>
-                            <!-- <div class="overlap-3">
-                            <div class="overlap-group-2">
-                                <div class="text-wrapper-21">Indonesia</div>
-                            </div>
-                            <div class="text-wrapper-22">English</div>
-                            <div class="text-wrapper-23">Mandarin</div>
-                        </div> 
-                    </div>
-                </div>
-                </d-6iv>
-            </div>
-     <!-- End Footer -->
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-    </div>
-
-</body>
-
-</html>
+@endsection

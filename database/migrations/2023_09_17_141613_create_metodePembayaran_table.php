@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_pembayaran',30);
             $table->string('code_bank',12);
+            $table->string('image');
             $table->timestamps();
         });
     }

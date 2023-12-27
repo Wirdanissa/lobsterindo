@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_penangkaran');
             $table->foreign('id_penangkaran')->references('id')->on('penangkaran');
             $table->string('nama_barang',30);
-            $table->integer('jumlah_barang');
+            // $table->integer('jumlah_barang');
             $table->integer('berat');
             $table->integer('harga');
             $table->text('deskripsi');

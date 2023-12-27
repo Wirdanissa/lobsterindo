@@ -28,15 +28,15 @@
                         <li style="margin-bottom: 10px"><a href="#">Tentang kami</a></li>
                         <li>Ikuti Kami</li>
                         <li class="sosmed">
-                            <a href=""><img src="images/instagram.png" alt=""></a>
-                            <a href=""><img src="images/facebook.png" alt=""></a>
-                            <a href=""><img src="images/twitter.png" alt=""></a>
+                            <a href=""><img src="{{ URL('images/instagram.png')}}" alt=""></a>
+                            <a href=""><img src="{{ URL('images/facebook.png')}}" alt=""></a>
+                            <a href=""><img src="{{ URL('images/twitter.png')}}" alt=""></a>
                         </li>
                     </ul>
 
                 </div>
                 <div class="col-4 position-relative logo_bahasa">
-                    <div class="logo" style=" background-image: url('images/lobsterindoputih.png');">
+                    <div class="logo" style=" background-image: url('{{ URL('images/lobsterindoputih.png') }}');">
                     </div>
                     <!-- <div class="overlap-3">
                         <div class="overlap-group-2">

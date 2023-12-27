@@ -20,7 +20,9 @@
             <div class="mb-2">
               <select class="form-select rounded-3 border" aria-label="Default select example" name="manager_id">
                 <option disabled selected>Pilih Penangkaran</option>
-                <option> Jl.tambak medokan ayu</option>
+                @foreach ( $penangkaran as $item )
+                    <option> {{ $item->lokasi_penangkaran }}</option>
+                @endforeach
               </select>
             </div>
             <input type="radio" id="html" name="fav_language" value="HTML">
@@ -39,7 +41,28 @@
           </div>
         </div>
         <div class="mt-2 row d-flex justify-content-center g-3">
-          <div class="col-5 d-flex justify-content-center">
+          @foreach ($barang as $items )
+            <div class="col-5 d-flex justify-content-center">
+                <a style="text-decoration: none;" href="#">
+                <div class="katalog p-4 row d-flex align-items-center">
+                    <div
+                    style="background-size:150px 150px; background-repeat: no-repeat; background-image: url('{{ URL('foto_barang/'.$items->image) }}')"
+                    class="image col-4">
+                    </div>
+                    <div class="col-7 ms-4 flex-column">
+                    <div class="stock">
+                        Stock: {{ $items->berat }}g
+                    </div>
+                    <b>{{ $items->nama_items }}</b>
+                    <b class="harga">Rp.{{ $items->harga }}</b>
+                    <p>{{ $items->deskripsi }}</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+          @endforeach
+
+          {{-- <div class="col-5 d-flex justify-content-center">
             <a style="text-decoration: none;" href="Pemesanan.html">
               <div class="katalog p-4 row d-flex align-items-center">
                 <div
@@ -94,26 +117,7 @@
                 </div>
               </div>
             </a>
-          </div>
-
-          <div class="col-5 d-flex justify-content-center">
-            <a style="text-decoration: none;" href="Pemesanan.html">
-              <div class="katalog p-4 row d-flex align-items-center">
-                <div
-                  style="background-size:150px 150px; background-repeat: no-repeat; background-image: url('images/LobsterKonsumsi.png')"
-                  class="image col-4">
-                </div>
-                <div class="col-7 ms-4 flex-column">
-                  <div class="stock">
-                    Stock: 20Kg
-                  </div>
-                  <b>Lobster AirTawar Konsumsi</b>
-                  <b class="harga">Rp.180.000</b>
-                  <p>Lobster AirTawar dengan ukuran 4 sampai 6 inc</p>
-                </div>
-              </div>
-            </a>
-          </div>
+          </div> --}}
         </div>
     </section>
 @endsection

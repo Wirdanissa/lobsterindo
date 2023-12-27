@@ -13,6 +13,7 @@ class Pemesanan extends Model
         'id_barang',
         'id_pembayaran',
         'id_user',
+        'id_pengiriman',
         'tgl_pemesanan',
         'tgl_pembayaran',
         'tgl_pengiriman',
@@ -20,10 +21,11 @@ class Pemesanan extends Model
         'total_pembayaran',
         'alamat_pengiriman',
         'deskripsi_pemesanan',
-        'status_pembayaran',
-        'status_pemesanan',
-        'status_pengiriman',
-        'no_pembayaran'
+        'status',
+        // 'status_pembayaran',
+        // 'status_pemesanan',
+        // 'status_pengiriman',
+        // 'no_pembayaran'
     ];
 
     public function barang(){
@@ -36,5 +38,9 @@ class Pemesanan extends Model
 
     public function user(){
         return $this->hasOne(User::class, 'id', 'id_user');
+    }
+
+    public function pengiriman(){
+        return $this->hasOne(Pengiriman::class, 'id', 'id_pengiriman');
     }
 }

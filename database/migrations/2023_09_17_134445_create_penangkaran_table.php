@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('manager_id');
             $table->foreign('manager_id')->references('id')->on('users');
             $table->string('lokasi_penangkaran',50);
+            $table->unique('lokasi_penangkaran');
             $table->integer('jumlah_karyawan');
             $table->timestamps();
         });

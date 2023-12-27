@@ -15,7 +15,7 @@ class PenangkaranController extends Controller
     public function index()
     {
         $data = Penangkaran::all();
-        return view('penangkaran.penangkaran')->with('data', $data);
+        return view('Boss.Penangkaran')->with('data', $data);
     }
 
     /**
@@ -24,7 +24,7 @@ class PenangkaranController extends Controller
     public function create()
     {
         $data = User::where('role',3)->get();
-        return view('penangkaran.penangkaran_create')->with('data',$data);
+        return view('Boss.Create-penangkaran')->with('data',$data);
     }
 
     /**
@@ -50,7 +50,7 @@ class PenangkaranController extends Controller
         $data = [
             'manager_id' => $request->manager_id,
             'lokasi_penangkaran' => $request->lokasi_penangkaran,
-            'jumlah_karyawan' => 0
+            'jumlah_karyawan' => 1
         ];
 
         Penangkaran::create($data);
@@ -76,7 +76,7 @@ class PenangkaranController extends Controller
             'data' => $data_penangkaran,
             'role' => $role
         ];
-        return view('penangkaran.penangkaran_edit')->with($data);
+        return view('Boss.Edit-penangkarang')->with($data);
     }
 
     /**
@@ -103,7 +103,7 @@ class PenangkaranController extends Controller
         ];
 
         Penangkaran::where('id',$id)->update($data);
-        return redirect('penangkaran')->with('success', 'Berhasil Melakukan Update');
+        return redirect('/penangkaran/'.$id.'/edit')->with('success', 'Berhasil Melakukan Update');
     }
 
     /**

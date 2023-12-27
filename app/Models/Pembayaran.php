@@ -13,5 +13,6 @@ class Pembayaran extends Model
     protected $fillable = [
         'nama_pembayaran',
         'code_bank',
+        'image'
     ];
 }

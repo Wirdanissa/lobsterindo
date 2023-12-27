@@ -10,26 +10,23 @@
         <div class="utama">
             <div class="containerlogin" id="containerlogin">
                 <div class="form-containerlogin sign-up-containerlogin">
-                    <form method="POST" action="login.html">
+                    <form action="{{ URL('/user') }}" method="POST">
+                        @csrf
                         <h1>Create Account</h1>
-                        <input id="name" type="text" class="form-control " name="name" required autocomplete="name"
+                        <input id="nama" type="text" class="form-control " name="nama" required autocomplete="nama"
                             placeholder="Nama">
-                        <!-- <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
-              </span> -->
+
                         <input id="email" type="email" class="form-control " name="email" required autocomplete="email"
                             placeholder="Email">
-                        <!-- <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-              </span> -->
+
+                        <input id="no_telp" type="number" class="form-control " name="no_telp" required
+                            autocomplete="08223192" placeholder="No.Telp">
+
                         <input id="password" type="password" class="form-control " name="password" required
                             autocomplete="new-password" placeholder="Password">
 
-                        <!-- <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                  </span> -->
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
-                            required autocomplete="new-password" placeholder="confirm-password">
+                        {{-- <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
+                            required autocomplete="new-password" placeholder="confirm-password"> --}}
                         <button style="width: auto;" type="submit" class="btn btn-orange mt-2">
                             Register
                         </button>
@@ -38,23 +35,19 @@
 
 
                 <div class="form-containerlogin sign-in-containerlogin">
-                    <form method="POST" action="Beranda.html">
-
+                    <form method="POST" action="{{ URL('/login') }}">
+                        @csrf
+                        @method('PUT')
                         <h1>Sign in</h1>
                         <input id="email" type="email" class="form-control " name="email" required autocomplete="email"
                             autofocus placeholder="Email">
 
-                        <!-- <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span> -->
 
 
                         <input id="password" type="password" class="form-control" name="password" required
                             autocomplete="current-password" placeholder="Password">
 
-                        <!-- <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span> -->
+
 
 
 

@@ -19,6 +19,8 @@ return new class extends Migration
             $table->foreign('id_pembayaran')->references('id')->on('metode_pembayaran');
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id')->on('users');
+            $table->unsignedBigInteger('id_pengiriman')->nullable();
+            $table->foreign('id_pengiriman')->references('id')->on('pengiriman');
             $table->dateTime('tgl_pemesanan');
             $table->dateTime('tgl_pembayaran');
             $table->dateTime('tgl_pengiriman');
@@ -26,11 +28,15 @@ return new class extends Migration
             $table->integer('total_pembayaran');
             $table->string('alamat_pengiriman',50);
             $table->text('deskripsi_pemesanan')->nullable();
-            $table->boolean('status_pembayaran');
-            $table->boolean('status_pemesanan');
-            $table->boolean('status_pengiriman');
-            $table->string('no_pembayaran',5);
-        
+            $table->boolean('status');
+            //Status 0 = belum dibayar
+            //Status 1 = proses kirim
+            //Status 2 = selesai
+
+            // $table->boolean('status_pemesanan');
+            // $table->boolean('status_pengiriman');
+            // $table->string('no_pembayaran',5);
+
             $table->timestamps();
         });
     }

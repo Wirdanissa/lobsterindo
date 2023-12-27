@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\barang;
 use App\Models\Pemesanan;
+use App\Models\Pengiriman;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -16,6 +17,13 @@ class PemesananController extends Controller
     {
         $data = Pemesanan::all();
         return view('pemesanan.pemesanan')->with('data', $data);
+    }
+
+    public function master_pengiriman()
+    {
+        // return 1;
+        $data = Pemesanan::all();
+        return view('Kurir.MasterPengiriman')->with('data', $data);
     }
 
     /**
@@ -91,10 +99,17 @@ class PemesananController extends Controller
 
     public function show(string $id)
     {
-        //
+        $data = Pemesanan::where('id', $id)->first();
+        return view('Proses-Kurir.proses3')->with('data', $data);
     }
 
-    /**
+
+    public function show_pengiriman(string $id)
+    {
+        $data = Pemesanan::where('id',$id)->first();
+        return view('Proses-Kurir.proses2')->with('data', $data);
+    }
+        /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
@@ -110,6 +125,58 @@ class PemesananController extends Controller
         //
     }
 
+    public function update_pengiriman(Request $request, string $id)
+    {
+        Session::flash('timbangan', $request->timbangan);
+        Session::flash('total_harga', $request->total_harga);
+
+        $request -> validate([
+            'foto_nota' => 'required|mimes:png,jpg,jpeg,HEIC ',
+            'foto_timbangan' => 'required|mimes:png,jpg,jpeg,HEIC ',
+            'timbangan' => 'required|numeric',
+            'total_harga' => 'required|numeric',
+        ],[
+            'foto_nota.required' => 'Foto Bukti Nota wajib diisi',
+            'foto_timbangan.required' => 'Foto Bukti Timbangan wajib diisi',
+            'timbangan.required' => 'Total timbangan wajib diisi',
+            'total_harga.required' => 'Total harga wajib diisi',
+            'foto_nota.mimes' => 'foto harus berekstensi png,jpg,jpeg,heic',
+            'foto_timbangan.mimes' => 'foto harus berekstensi png,jpg,jpeg,heic',
+            'timbangan.numeric' => 'Timbangan hanya menerima input angka',
+            'total_harga.numeric' => 'Total Harga hanya menerima input angka',
+        ]);
+
+        $foto_nota = $request->file('foto_nota');
+        $foto_nota_ekstensi = $foto_nota->extension();
+
+        $foto_nota_nama = date('ymdhis').".".$foto_nota_ekstensi;
+        $foto_nota->move(public_path('foto_pengiriman/foto_nota'),$foto_nota_nama);
+
+        $foto_timbangan = $request->file('foto_timbangan');
+        $foto_timbangan_ekstensi = $foto_timbangan->extension();
+
+        $foto_timbangan_nama = date('ymdhis').".".$foto_timbangan_ekstensi;
+        $foto_timbangan->move(public_path('foto_pengiriman/foto_timbangan'),$foto_timbangan_nama);
+
+        $data = [
+            'foto_nota' => $foto_nota_nama,
+            'foto_timbangan' => $foto_timbangan_nama,
+            'note' => $request->input('note'),
+            'ongkir' => 20000,
+            'timbangan' => $request->input('timbangan'),
+            'total_harga' => $request->input('total_harga')
+        ];
+
+        Pengiriman::create($data);
+
+        $pemesanan = Pemesanan::find($id);
+        $pemesanan->id_pengiriman = Pengiriman::max('id');
+        $pemesanan->status = 2;
+        $pemesanan->save();
+        // Pemesanan::where('id', $id)->update($data);
+
+        return redirect('/pengiriman')->with('success', 'Berhasil Melakukan Update');
+    }
     /**
      * Remove the specified resource from storage.
      */

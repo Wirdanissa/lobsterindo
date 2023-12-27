@@ -10,12 +10,13 @@
         <div class="flex-colum">
           <center>
             <p class="title">Halaman Informasi Pribadi</p>
-            <p class="title-desc">Halo Alwan Selamat datang, dihalaman ini kamu dapat merubah informasi pribadi milikmu.
+            <p class="title-desc">Halo {{ $data->nama_user }} Selamat datang, dihalaman ini kamu dapat merubah informasi pribadi milikmu.
             </p>
           </center>
         </div>
       </div>
-      <form action="Beranda.html" method="post">
+      <form action="{{ '/user' }}" method="post">
+        @csrf
         <div style="margin-bottom: 15vh;" class="row d-flex justify-content-center">
           <div class="col-3 box me-3">
             <p class="profile-title">Informasi Utama</p>
@@ -27,7 +28,7 @@
                 <label for="inputNama" class="col-sm-2 col-form-label">Nama:</label>
               </div>
               <div class="col-sm-9">
-                <input type="text" class="form-control" id="inputNama" name="nama" value="Alwan Hakim">
+                <input type="text" class="form-control" id="inputNama" name="nama" value="{{ $data->nama_user }}">
               </div>
             </div>
             <p style="text-align: center; color: grey;">Gunakan nama dengan benar, agar mempermudah
@@ -37,7 +38,7 @@
                 Email :
               </div>
               <div class="col-sm-9">
-                Alwan.Hakim@gmail.com
+                {{ $data->email }}
               </div>
             </div>
           </div>
@@ -49,7 +50,7 @@
                 </div>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="inputNama" name="nama"
-                    value="Jl.Tambak medokan ayu 6C no.68">
+                    value="{{ $data->alamat }}">
                 </div>
               </div>
               <div class="row g-2">
@@ -73,14 +74,14 @@
                   <label for="inputNama" class="form-label">No Telp:</label>
                 </div>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="inputNama" name="nama" value="082231923585">
+                  <input type="text" class="form-control" id="inputNama" name="nama" value="{{ $data->no_telp }}">
                   <p style="color: grey;" class="mt-2">Gunakan No.Telephone aktif</p>
                 </div>
               </div>
-              <a class="change-password d-flex justify-content-end" href="change-password.html">Rubah password</a>
+              <a class="change-password d-flex justify-content-end" href="{{ URL('user/'.$data->id.'/password') }}">Rubah password</a>
             </div>
             <div class="row d-flex justify-content-center">
-              <a style="width: 40%;" href="Beranda.html"
+              <a style="width: 40%;" href="{{ URL('/') }}"
                 class="btn btn-orange me-3 d-flex align-items-center justify-content-center">Kembali</a>
               <button style="width: 40%;" type="submit"
                 class="btn btn-orange d-flex align-items-center justify-content-centere">Simpan Perubahan</button>

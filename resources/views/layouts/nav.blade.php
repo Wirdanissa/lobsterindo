@@ -1,5 +1,8 @@
 <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
 <!-- Navbar -->
+
+@if (Auth::check())
+
 <nav class="navbar navbar-expand-md navbar-dark bg-white shadow-sm">
     <div class="navbar-lobster">
         <a class="navbar-brand" href="Beranda.html">
@@ -33,21 +36,32 @@
         <div class="nav-item dropdown pe-3">
             <a style="display: inline-flex;" class="nav-link nav-profile pe-0 d-flex align-items-center"
                 href="#" data-bs-toggle="dropdown">
-                <div style="background-image: url('images/pp.png');" class="circle"></div>
-                <span class="d-none d-md-block dropdown-toggle ps-2">Alwan Hakim</span>
+                <div style="background-image: url('{{ URL('images/pp.png') }}');" class="circle"></div>
+                <span style="text-transform: capitalize" class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->nama_user }}</span>
             </a><!-- End Profile Iamge Icon -->
 
             <ul class="dropdown-menu profile">
                 <li class="dropdown-header">
-                    <h6>Alwan Hakim</h6>
-                    <span>Manager</span>
+                    <h6 style="text-transform: capitalize">{{ Auth::user()->nama_user }}</h6>
+                    @if ( Auth::user()->role == 1 )
+                    <span style="text-transform: capitalize" >Customer</span>
+                    @elseif ( Auth::user()->role == 2 )
+                    <span style="text-transform: capitalize" >Boss</span>
+                    @elseif ( Auth::user()->role == 3 )
+                    <span style="text-transform: capitalize" >Manager</span>
+                    @elseif ( Auth::user()->role == 4 )
+                    <span style="text-transform: capitalize" >Admin Gudang</span>
+                    @elseif ( Auth::user()->role == 5 )
+                    <span style="text-transform: capitalize" >Kurir</span>
+                    @endif
+
                 </li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>
 
                 <li>
-                    <a class="dropdown-item d-flex align-items-center" href="Profile.html">
+                    <a class="dropdown-item d-flex align-items-center" href="{{ URL('/user/'.Auth::user()->id) }}">
                         <i class="bi bi-person"></i>
                         <span>My Profile</span>
                     </a>
@@ -57,27 +71,47 @@
                 </li>
 
                 <li>
-                    <a class="dropdown-item d-flex align-items-center" href="Boss/Admin.html">
+                    @if (Auth::user()->role == 2)
+                    <a class="dropdown-item d-flex align-items-center" href="{{ URL('/boss') }}">
                         <i class="bi bi-gear"></i>
                         <span>Admin Page</span>
                     </a>
-                </li>
-                <li>
                     <hr class="dropdown-divider">
+                    @elseif (Auth::user()->role == 3)
+                    <a class="dropdown-item d-flex align-items-center" href="{{ URL('/manager') }}">
+                        <i class="bi bi-gear"></i>
+                        <span>Admin Page</span>
+                    </a>
+                    <hr class="dropdown-divider">
+                    @elseif (Auth::user()->role == 4)
+                    <a class="dropdown-item d-flex align-items-center" href="{{ URL('/admingudang') }}">
+                        <i class="bi bi-gear"></i>
+                        <span>Admin Page</span>
+                    </a>
+                    <hr class="dropdown-divider">
+                    @elseif (Auth::user()->role == 5)
+                    <a class="dropdown-item d-flex align-items-center" href="{{ URL('/kurir') }}">
+                        <i class="bi bi-gear"></i>
+                        <span>Admin Page</span>
+                    </a>
+                    <hr class="dropdown-divider">
+                    @endif
+                <li>
+
                 </li>
 
                 <!-- <li>
                 <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                  <i class="bi bi-question-circle"></i>
-                  <span>Need Help?</span>
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
                 </a>
-              </li> -->
+            </li> -->
                 <!-- <li>
                 <hr class="dropdown-divider">
-              </li> -->
+            </li> -->
 
                 <li>
-                    <a class="dropdown-item d-flex align-items-center" href="login.html">
+                    <a class="dropdown-item d-flex align-items-center" href="{{ URL('/logout') }}">
                         <i class="bi bi-box-arrow-right"></i>
                         <span>Sign Out</span>
                     </a>
@@ -94,9 +128,9 @@
 </nav>
 <!-- End Navbar -->
 
-
+@else
 <!-- Navbar Login -->
-{{-- <nav class="navbar navbar-expand-md navbar-dark bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-dark bg-white shadow-sm">
     <div class="navbar-lobster">
         <a class="navbar-brand" href="Beranda.html">
             <b style="font-size: 1.3em">Lobsterindo</b>
@@ -110,19 +144,19 @@
         <div class="row align-items-center" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item me-4">
-                    <a class="nav-link" href="Beranda.html">Beranda</a>
+                    <a class="nav-link" href="{{ URL('/') }}">Beranda</a>
                 </li>
                 <li class="nav-item me-4">
-                    <a class="nav-link" href="Partnership.html">Partnership</a>
+                    <a class="nav-link" href="{{ URL('/Partnership') }}">Partnership</a>
                 </li>
                 <li class="nav-item me-4">
-                    <a class="nav-link" href="Budidaya.html">Budidaya</a>
+                    <a class="nav-link" href="{{ URL('/Budidaya') }}">Budidaya</a>
                 </li>
                 <li class="nav-item me-4">
-                    <a class="nav-link" href="Belanja.html">Belanja</a>
+                    <a class="nav-link" href="{{ URL('barang') }}">Belanja</a>
                 </li>
                 <li class="nav-item me-4">
-                    <a class="nav-link" href="#">Riwayat Belanja</a>
+                    <a class="nav-link" href="{{ URL('/RiwayatBelanja') }}">Riwayat Belanja</a>
                 </li>
             </ul>
         </div>
@@ -130,5 +164,6 @@
             <a href="" class="btn-signin">Login/Register</a>
         </div>
     </div>
-</nav> --}}
+</nav>
 <!-- End Navbar -->
+@endif

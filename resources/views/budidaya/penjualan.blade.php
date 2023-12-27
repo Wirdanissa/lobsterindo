@@ -11,40 +11,7 @@
 
         <!-- sidebar -->
         <!-- Kolom Pertama (Lebar 8) -->
-        <div id="sidebar" class="col-md-10 d-md-block sidebar">
-          <div class="position-sticky">
-            <h2 class="mb-5">
-              Lobsterindo <br />
-              <span>Education Site</span>
-            </h2>
-            <ul class="nav flex-column mt-3 ms-2">
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="intro.html"> Introduction </a>
-              </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="lobster-airtawar.html"> Lobster Air Tawar </a>
-              </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="habitat.html"> Habitat </a>
-              </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="makanan.html"> Makanan </a>
-              </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="ukuran.html"> Ukuran </a>
-              </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="pemijahan.html"> Proses Pemijahan </a>
-              </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="pembesaran.html"> Pembesaran </a>
-              </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link active" href="penjualan.html"> Penjualan </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        @include('layouts.sidebar')
         <!-- end sidebar -->
         <!-- Kolom Kedua (Lebar 4) -->
         <main class="col-md-4 ms-sm-5 col-lg-8">
