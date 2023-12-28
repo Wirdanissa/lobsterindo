@@ -221,7 +221,7 @@
         </form>
       </div>
       <p><b>Daftar Pegawai</b></p>
-      <a style="width: 15vw;" href="Create-pegawai.html" class="btn btn-orange">Tambah Pegawai</a>
+      <a style="width: 15vw;" href="{{ URL('/karyawan/create') }}" class="btn btn-orange">Tambah Pegawai</a>
 
       <!-- daftar pegawai -->
       <div class="container-daftar-karyawan mt-2 row d-flex justify-content-center g-3">

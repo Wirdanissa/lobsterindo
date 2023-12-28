@@ -18,6 +18,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
                         // 'id'=>'2',
                         'nama_user'=>'Ozzy',
+                        'role' => 2,
                         'no_telp'=>'081213408596',
                         'alamat'=>'jl.tambak medokan ayu 6C/68',
                         'email'=>'bangojikk@gmail.com',
@@ -31,6 +32,7 @@ class UserSeeder extends Seeder
                         // 'id'=>'2',
                         'nama_user'=>'Alwan',
                         'no_telp'=>'082231923585',
+                        'role' => 3,
                         'alamat'=>'jl.tambak medokan ayu 6C/68',
                         'email'=>'dani.annur.master@gmail.com',
                         'password'=>Hash::make('password'),

@@ -42,7 +42,7 @@
 
             <ul class="dropdown-menu profile">
                 <li class="dropdown-header">
-                    <h6 style="text-transform: capitalize">{{ Auth::user()->nama_user }}</h6>
+                    <h6 style="text-transform: capitalize">{{ Auth::user()->nama_user }}  id : {{ Auth::user()->id }}</h6>
                     @if ( Auth::user()->role == 1 )
                     <span style="text-transform: capitalize" >Customer</span>
                     @elseif ( Auth::user()->role == 2 )
@@ -161,7 +161,7 @@
             </ul>
         </div>
         <div>
-            <a href="" class="btn-signin">Login/Register</a>
+            <a href="{{ URL('/login') }}" class="btn-signin">Login/Register</a>
         </div>
     </div>
 </nav>

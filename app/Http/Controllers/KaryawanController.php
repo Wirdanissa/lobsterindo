@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Karyawan;
 use App\Models\Penangkaran;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class KaryawanController extends Controller
 {
@@ -28,7 +30,8 @@ class KaryawanController extends Controller
      */
     public function create()
     {
-        //
+        $data = Penangkaran::all();
+        return view('Boss.Create-pegawai')->with('data', $data);
     }
 
     /**
@@ -36,7 +39,35 @@ class KaryawanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Session::flash('penangkaran', $request->penangkaran);
+        Session::flash('role', $request->role);
+        Session::flash('user', $request->user);
+        // Session::flash('jumlah_karyawan', $request->jumlah_karyawan);
+
+        $request->validate([
+            'penangkaran'=>'required',
+            'role'=>'required',
+            'user'=>'required'
+            // 'jumlah_karyawan'=>'required|numeric'
+        ], [
+            'penangkaran.required' => 'Penangkaran wajib diisi',
+            'role.required' => 'role Wajib diisi',
+            'user.required' => 'user Wajib diisi',
+            // 'jumlah_karyawan.required' => 'Jumlah Karyawan Wajib diisi',
+            // 'jumlah_karyawan.numeric' => 'Jumlah Karyawan hanya menerima input angka',
+        ]);
+        $data = [
+            'penangkaran_id' => $request->penangkaran,
+            'user_id' => $request->user
+        ];
+
+        $role = [
+            'role' => $request->role
+        ];
+
+        User::where('id', $request->user)->update($role);
+        Karyawan::create($data);
+        return redirect('/karyawan')->with('success', 'Berhasil Menambahkan Data');
     }
 
     /**

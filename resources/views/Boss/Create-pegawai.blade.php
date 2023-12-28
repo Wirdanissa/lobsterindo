@@ -15,29 +15,33 @@
                   </div>
               </center>
             </div>
+            <form action="{{ URL('/karyawan') }}" method="post">
+            @csrf
             <div class="flex-colum">
                 <center>
                 <div  class="mb-2">
-                    <select style="width: 30%;" class="form-select rounded-3 border" aria-label="Default select example" name="manager_id">
+                    <select style="width: 30%;" class="form-select rounded-3 border" aria-label="Default select example" name="penangkaran">
                       <option disabled selected>Pilih Penangkaran</option>
-                      <option> Jl.tambak medokan ayu</option>
+                      @foreach ( $data as $item )
+                        <option value="{{ $item->id }}">{{ $item->lokasi_penangkaran }}</option>
+                      @endforeach
                     </select>
                   </div>
                   <div class="box-create-pegawai">
                     <div class="mb-3 row">
                         <label for="exampleFormControlTextarea1" class="col-md-2 col-form-label">Id User</label>
                         <div class="col-md-10">
-                            <input type="number" class="form-control" id="exampleFormControlInput1" min="0">
+                            <input type="number" class="form-control" id="exampleFormControlInput1" min="0" name="user">
                         </div>
                       </div>
                       <div class="mb-3 row">
                         <label for="exampleInputPassword1" class="col-md-2 col-form-label">Jabatan</label>
                         <div class="col-md-10">
-                          <select class="form-select rounded-3 border" aria-label="Default select example" name="manager_id">
+                          <select class="form-select rounded-3 border" aria-label="Default select example" name="role">
                             <option disabled selected>Jabatan</option>
-                              <option value="{{ $item->id }}"> Manager</option>
-                              <option value="{{ $item->id }}"> Admin Gudang</option>
-                              <option value="{{ $item->id }}"> Kurir</option>
+                              <option value="3"> Manager</option>
+                              <option value="4"> Admin Gudang</option>
+                              <option value="5"> Kurir</option>
                           </select>
                         </div>
                       </div>
@@ -59,5 +63,6 @@
                   </div>
                 </center>
             </div>
+        </form>
         </section>
 @endsection
